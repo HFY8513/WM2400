@@ -1,0 +1,170 @@
+{
+    "dataperiod": 10,
+    "devlist": [
+        {
+            "addr": 170,
+            "capacity": 7,
+            "devperiod": 10,
+            "devtype": 0,
+            "inftype": 0,
+            "logicname": "rs485_1",
+            "model": "TESTCEMS",
+            "name": "testcems",
+            "protocol": "testcems"
+        },
+        {
+            "name": "HF",
+            "model": "TEST_HF",
+            "protocol": "test_hf",
+            "inftype": 0,
+            "logicname": "rs485_1",
+            "addr": 0,
+            "devperiod": 10,
+            "devtype": 0,
+            "capacity": 7
+        },
+        {
+            "name": "PN_VOC",
+            "model": "PN_VOC",
+            "protocol": "vocpn_modbus",
+            "inftype": 0,
+            "logicname": "rs485_2",
+            "addr": 1,
+            "devperiod": 10,
+            "devtype": 0,
+            "capacity": 7
+        }
+    ],
+    "fchlist": [
+        {
+            "channel": 2,
+            "devmax": 0,
+            "devmin": 0,
+            "devname": "PN_VOC",
+            "fid": "U000017",
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": false,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": false,
+            "stationid": 1,
+            "systemid": -1,
+            "unit": ""
+        },
+        {
+            "channel": 7,
+            "devmax": 0,
+            "devmin": 0,
+            "devname": "testcems",
+            "fid": "U000903",
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": false,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": false,
+            "stationid": 1,
+            "systemid": -1,
+            "unit": "度"
+        },
+        {
+            "channel": 8,
+            "devmax": 150,
+            "devmin": 0,
+            "devname": "testcems",
+            "fid": "U000908",
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": true,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": true,
+            "stationid": 1,
+            "systemid": -1,
+            "unit": "kPa"
+        },
+        {
+            "fid": "U000902",
+            "devname": "testcems",
+            "channel": 6,
+            "devmax": 0,
+            "devmin": 0,
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": false,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": false,
+            "stationid": 1,
+            "unit": "",
+            "systemid": -1
+        },
+        {
+            "fid": "U000098",
+            "devname": "PN_VOC",
+            "channel": 1,
+            "devmax": 300,
+            "devmin": 0,
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": true,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": false,
+            "stationid": 1,
+            "unit": "",
+            "systemid": -1
+        },
+        {
+            "fid": "U000025",
+            "devname": "PN_VOC",
+            "channel": 0,
+            "devmax": 500,
+            "devmin": 0,
+            "intercept": 0,
+            "rangeflag": false,
+            "rangelimit": true,
+            "rangemax": 0,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": false,
+            "stationid": 1,
+            "unit": "",
+            "systemid": -1
+        }
+    ],
+    "instid": 0,
+    "uiocom": [
+        {
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "logicname": "rs485_1",
+            "parity": 0,
+            "phyname": "COM9",
+            "stop_bits": 0
+        },
+        {
+            "logicname": "rs485_2",
+            "phyname": "COM7",
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "parity": 0,
+            "stop_bits": 0
+        },
+        {
+            "logicname": "rs232_1",
+            "phyname": "COM1",
+            "baud_rate": 9600,
+            "byte_size": 7,
+            "parity": 2,
+            "stop_bits": 2
+        }
+    ],
+    "uiotcp": []
+}

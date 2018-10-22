@@ -1,0 +1,88 @@
+{
+    "dataperiod": 10,
+    "devlist": [
+        {
+            "name": "adm7017_01",
+            "model": "ADM7017",
+            "protocol": "adm7017",
+            "inftype": 0,
+            "logicname": "rs485_1",
+            "addr": 170,
+            "devperiod": 10,
+            "devtype": 1,
+            "capacity": 1
+        }
+    ],
+    "fchlist": [
+        {
+            "fid": "U030101",
+            "devname": "adm7017_01",
+            "channel": 0,
+            "devmax": 20,
+            "devmin": 4,
+            "intercept": 0,
+            "rangeflag": true,
+            "rangelimit": true,
+            "rangemax": 2000,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": true,
+            "stationid": 1,
+            "unit": "mg/L",
+            "systemid": -1
+        },
+        {
+            "fid": "U030201",
+            "devname": "adm7017_01",
+            "channel": 1,
+            "devmax": 20,
+            "devmin": 4,
+            "intercept": 0,
+            "rangeflag": true,
+            "rangelimit": true,
+            "rangemax": 2000,
+            "rangemin": 0,
+            "slope": 1,
+            "slopeflag": true,
+            "stationid": 1,
+            "unit": "mg/L",
+            "systemid": -1
+        }
+    ],
+    "instid": 0,
+    "uiocom": [
+        {
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "logicname": "com232_1",
+            "parity": 0,
+            "phyname": "COM3",
+            "stop_bits": 0
+        },
+        {
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "logicname": "com232_2",
+            "parity": 0,
+            "phyname": "COM4",
+            "stop_bits": 0
+        },
+        {
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "logicname": "rs485_1",
+            "parity": 0,
+            "phyname": "COM5",
+            "stop_bits": 0
+        },
+        {
+            "logicname": "rs485_2",
+            "phyname": "COM6",
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "parity": 0,
+            "stop_bits": 0
+        }
+    ],
+    "uiotcp": []
+}

@@ -1,0 +1,28 @@
+{
+    "instid": 0,
+    "tchlist": [
+        {
+            "stationid": 1,
+            "tchid": 1,
+            "protocol": "gbnatwms",
+            "inftype": 1,
+            "logicname": "dtsch_1",
+            "flowunit": "",
+            "mn": "11110001",
+            "pw": "123456",
+            "minuteint": 10,
+            "rtdint": 60,
+            "delaytime": 0,
+            "retranstime": 0
+        }
+    ],
+    "uiocom": [],
+    "uiotcp": [
+        {
+            "logicname": "dtsch_1",
+            "host": "127.0.0.1",
+            "port": 8100,
+            "udpflag": false
+        }
+    ]
+}

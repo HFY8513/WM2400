@@ -1,0 +1,20 @@
+{
+    "cmdport": 9300,
+    "db": {
+        "database": "zendb",
+        "host": "127.0.0.1",
+        "password": "zeei",
+        "port": 3306,
+        "user": "root"
+    },
+    "model": "ipms",
+    "name": "工况站点",
+    "sitelist": [
+        {
+            "name": "",
+            "stationid": 1,
+            "sysid": 51
+        }
+    ],
+    "usecmdserver": true
+}

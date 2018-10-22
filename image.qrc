@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/image/fontawesome-webfont.ttf</file>
+        <file>res/image/bg-brand.png</file>
+        <file>res/image/home/micon01.png</file>
+        <file>res/image/home/micon02.png</file>
+        <file>res/image/home/micon03.png</file>
+        <file>res/image/home/micon04.png</file>
+        <file>res/image/home/micon05.png</file>
+        <file>res/image/home/micon06.png</file>
+        <file>res/image/home/micon07.png</file>
+        <file>res/image/home/micon08.png</file>
+        <file>res/image/home/micon09.png</file>
+        <file>res/image/home/micon10.png</file>
+        <file>res/image/home/micon11.png</file>
+        <file>res/image/home/micon12.png</file>
+        <file>res/image/home/micon13.png</file>
+        <file>res/image/home/micon14.png</file>
+        <file>res/image/home/miconbglf.png</file>
+        <file>res/image/home/miconbgrt.png</file>
+        <file>res/image/home/slcbg.jpg</file>
+        <file>res/image/home/slcitembg.png</file>
+        <file>res/image/home/tmpic.gif</file>
+
+    </qresource>
+</RCC>

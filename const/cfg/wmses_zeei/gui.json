@@ -1,0 +1,26 @@
+{
+    "port": 9200,
+    "mode": "remote",
+    "version": "3.06",
+    "userlist": [
+        {
+            "user": "admin",
+            "pw": "zeei",
+            "grade": 2
+        },
+        {
+            "user": "operator",
+            "pw": "zeei",
+            "grade": 1
+        }
+    ],
+    "showctrl": true,
+    "showparam": [],
+    "showmode": "wmses",
+    "showgroup": [
+        "0"
+    ],
+    "polylist": [
+       
+    ]
+}

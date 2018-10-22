@@ -1,0 +1,9 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+EPTEK_VOC,D,1,甲烷,
+EPTEK_VOC,D,12,总排放量,
+EPTEK_VOC,D,18,氢气,
+EPTEK_VOC,D,19,室温,
+EPTEK_VOC,D,32,非甲烷总烃,
+EPTEK_VOC,D,37,烟气压力,
+EPTEK_VOC,D,46,烟气温度,
+EPTEK_VOC,D,53,总烃,

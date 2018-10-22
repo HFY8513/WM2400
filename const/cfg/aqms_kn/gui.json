@@ -1,0 +1,85 @@
+{
+    "port": 9200,
+    "mode": "remote",
+    "version": "3.06",
+    "userlist": [
+        {
+            "user": "admin",
+            "pw": "zeei",
+            "grade": 2
+        },
+        {
+            "user": "operator",
+            "pw": "zeei",
+            "grade": 1
+        }
+    ],
+    "showctrl": true,
+    "showmode": "datatable",
+    "showparam": [
+        "U000108",
+        "U000109",
+        "U000110",
+        "U000111",
+        "U000112"
+    ],
+    "showgroup": [
+        "0"
+    ],
+    "polylist": [
+        {
+            "fid": "U000118",
+            "text": "SO2浓度 (ug/m3)",
+            "color": "#7E0023",
+            "name": "SO2",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 1000
+        },
+        {
+            "fid": "U000121",
+            "text": "NO2浓度 (ug/m3)",
+            "color": "#FF7E00",
+            "name": "NO2",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 1000
+        },
+        {
+            "fid": "U000122",
+            "text": "CO浓度 (mg/m3)",
+            "color": "#00E400",
+            "name": "CO",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 200
+        },
+        {
+            "fid": "U000105",
+            "text": "O3浓度(ug/m3)",
+            "color": "#0072E3",
+            "name": "O3",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 200
+        },
+        {
+            "fid": "U000040",
+            "text": "PM10浓度(ug/m3)",
+            "color": "#007255",
+            "name": "PM10",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 1000
+        },
+        {
+            "fid": "U000041",
+            "text": "PM2.5浓度 (mg/m3)",
+            "color": "#00E488",
+            "name": "PM2.5",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 1000
+        }
+    ]
+}

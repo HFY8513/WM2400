@@ -1,0 +1,8 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+ZEEI_S310G_PH,D,0,PH,
+ZEEI_S310G_WT,D,0,温度,
+ZEEI_S310G_CDU,D,0,电导率,
+ZEEI_S310G_TUR,D,0,浊度,
+ZEEI_S310G_OXY,D,0,溶解氧,
+ZEEI_S310G_CYANO,D,0,蓝绿藻,
+ZEEI_S310G_CHA,D,0,叶绿素,

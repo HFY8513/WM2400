@@ -1,0 +1,5 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+KEZE_K301A_NH4N,D,0,氨氮,
+KEZE_K301A_TP,D,0,总磷,
+KEZE_K301A_TN,D,0,总氮,
+KEZE_K301A_CODMN,D,0,Codmn,

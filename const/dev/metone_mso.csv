@@ -1,0 +1,6 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+METONE_MSO15,D,0,风速,
+METONE_MSO15,D,1,风向,
+METONE_MSO15,D,2,气温,
+METONE_MSO15,D,3,湿度,
+METONE_MSO15,D,4,压力,

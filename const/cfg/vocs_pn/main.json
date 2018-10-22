@@ -1,0 +1,25 @@
+{
+    "cmdport": 9300,
+    "db": {
+        "database": "zendb",
+        "host": "127.0.0.1",
+        "password": "zeei",
+        "port": 3306,
+        "user": "root"
+    },
+    "model": "vocs",
+    "name": "VOCS",
+    "sitelist": [
+        {
+            "name": "",
+            "stationid": 1,
+            "sysid": 102
+        },
+        {
+            "name": "",
+            "stationid": 2,
+            "sysid": 102
+        }
+    ],
+    "usecmdserver": true
+}

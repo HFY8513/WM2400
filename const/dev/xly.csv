@@ -1,0 +1,9 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+XLY_LVCJY02,D,1,大气湿度,
+XLY_LVCJY02,D,2,大气压力,
+XLY_LVCJY02,D,3,总辐射,
+XLY_LVCJY02,D,6,风速,
+XLY_LVCJY02,D,7,风向,
+XLY_LVCJY02,D,8,大气温度,
+XLY_LVCJY02,D,9,大地温度,
+XLY_LVCJY02,D,10,雨量,

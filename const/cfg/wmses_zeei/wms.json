@@ -1,0 +1,27 @@
+{
+    "systemlist": [
+        {
+            "systemid": 0,
+            "name": "",
+            "measuretype": 0,
+            "measuerint": 2,
+            "measuertime": 110,
+            "epcmodule": "PLC",
+            "usemeasuretrig": true,
+            "trigmode": 1,
+            "trigflowlimt": 0,
+            "trigtimerange": "",
+            "usesampler": false,
+            "samplemode": 0,
+            "samplequantity": 100,
+            "samplerate": 0,
+            "sampler": ""
+        }
+    ],
+    "modelnodelist": [
+        {
+            "systemid": 0,
+            "stationid": 1
+        }
+    ]
+}

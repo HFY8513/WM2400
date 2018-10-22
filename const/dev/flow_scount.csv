@@ -1,0 +1,4 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+FLOW_SCOUNT,D,0,瞬时流量,
+FLOW_SCOUNT,D,1,流速,
+FLOW_SCOUNT,D,2,累计流量,

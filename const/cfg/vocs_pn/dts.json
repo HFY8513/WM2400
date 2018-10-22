@@ -1,0 +1,30 @@
+{
+    "instid": 0,
+    "tchlist": [
+        {
+            "stationid": 1,
+            "tchid": 1,
+            "protocol": "njdh",
+            "inftype": 0,
+            "logicname": "test",
+            "flowunit": "",
+            "mn": "XJHB0991800019",
+            "pw": "123456",
+            "minuteint": 1,
+            "rtdint": 30,
+            "delaytime": 0,
+            "retranstime": 0
+        }
+    ],
+    "uiocom": [
+        {
+            "logicname": "test",
+            "phyname": "COM2",
+            "baud_rate": 9600,
+            "byte_size": 5,
+            "parity": 0,
+            "stop_bits": 0
+        }
+    ],
+    "uiotcp": []
+}

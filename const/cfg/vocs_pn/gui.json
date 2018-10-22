@@ -1,0 +1,71 @@
+{
+    "port": 9200,
+    "mode": "remote",
+    "version": "3.06",
+    "userlist": [
+        {
+            "user": "admin",
+            "pw": "zeei",
+            "grade": 2
+        },
+        {
+            "user": "operator",
+            "pw": "zeei",
+            "grade": 1
+        },
+        {
+            "user": "test",
+            "pw": "zeei",
+            "grade": "1"
+        }
+    ],
+    "showctrl": true,
+    "showmode": "datatable",
+    "showparam": [
+        "U000902",
+        "U000903",
+        "U000908",
+        "U000912"
+    ],
+    "showgroup": [
+        "0"
+    ],
+    "polylist": [
+        {
+            "fid": "U010002",
+            "text": "SO2 (mg/m3)",
+            "color": "#7E0023",
+            "name": "SO2(干基值)",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 300
+        },
+        {
+            "fid": "U010003",
+            "text": "NOx浓度 (mg/m3)",
+            "color": "#FF7E00",
+            "name": "NOx(干基值)",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 500
+        },
+        {
+            "fid": "U010001",
+            "text": "烟尘浓度 (mg/m3)",
+            "color": "#00E400",
+            "name": "烟尘(干基值)",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 100
+        },
+        {
+            "fid": "U010901",
+            "text": "含氧量 (%)",
+            "color": "#0072E3",
+            "name": "含氧量(干)",
+            "title": "",
+            "Ymin": 0,
+            "Ymax": 25
+        }
+    ]
+}

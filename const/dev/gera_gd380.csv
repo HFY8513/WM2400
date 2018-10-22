@@ -1,0 +1,7 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+GERA_GD380,D,0,SO2,
+GERA_GD380,D,1,NO,
+GERA_GD380,D,2,N0x,
+GERA_GD380,D,3,含氧量,
+GERA_GD380,D,4,温度,
+GERA_GD380,D,5,CO2,

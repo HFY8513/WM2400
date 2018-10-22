@@ -1,0 +1,5 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+ZEEI_C310G_TP,D,0,总磷,
+ZEEI_C310G_TN,D,0,总氮,
+ZEEI_C310G_NH4N,D,0,氨氮,
+ZEEI_C310G_CodMn,D,0,CodMn,

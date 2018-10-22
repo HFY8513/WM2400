@@ -1,0 +1,4 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+METONE_PM25,D,0,PM2.5,
+METONE_PM10,D,0,PM10,
+METONE_PM1,D,0,PM1,

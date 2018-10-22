@@ -1,0 +1,11 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+TH_PM10,D,0,PM10,
+TH_PM25,D,0,PM2.5,
+TH_NO,D,0,NO,
+TH_NO,D,1,NO2,
+TH_NO,D,2,NOx,
+TH_SO2,D,0,SO2,
+TH_PM,D,0,PM10,
+TH_PM,D,1,PM2.5,
+TH_TH2009,D,0,室内温度,
+TH_TH2009,D,1,室内湿度,

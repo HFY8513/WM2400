@@ -1,0 +1,7 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+VAISALA_WXT520,D,0,风向,
+VAISALA_WXT520,D,1,风速,
+VAISALA_WXT520,D,2,大气温度,
+VAISALA_WXT520,D,3,大气湿度,
+VAISALA_WXT520,D,4,大气压力,
+VAISALA_WXT520,D,5,降雨强度,

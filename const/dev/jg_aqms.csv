@@ -1,0 +1,7 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+JG_AQMS_SO2,D,0,SO2,
+JG_AQMS_NOx,D,0,NO,
+JG_AQMS_NOx,D,1,NO2,
+JG_AQMS_NOx,D,2,NOx,
+JG_AQMS_CO,D,0,CO,
+JG_AQMS_O3,D,0,O3,

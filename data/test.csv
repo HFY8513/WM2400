@@ -1,0 +1,10 @@
+fid,channel,name,state,value,devtime,valid,lastsavetime
+U010601,0,1#进水PH,T,0,,FALSE,
+U010301,1,1#进水氨氮,T,0,,FALSE,
+U020301,2,1#出水NH3N浓度,T,0,,FALSE,
+U020501,3,1#出水PH,T,0,,FALSE,
+U020201,4,1#出水COD浓度,T,0,,FALSE,
+U010101,5,1#进水流量,T,0,,FALSE,
+U020101,6,1#出水流量,N,39.72,,TRUE,
+U020102,6,2#出水流量,N,2.36,,TRUE,
+U010201,7,1#进水COD,T,0,,FALSE,

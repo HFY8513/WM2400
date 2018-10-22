@@ -1,0 +1,28 @@
+{
+    "instid": 0,
+    "tchlist": [
+        {
+            "stationid": 1,
+            "tchid": 1,
+            "protocol": "gbt212",
+            "inftype": 1,
+            "logicname": "dtsch_1",
+            "flowunit": "",
+            "mn": "BAHB0001",
+            "pw": "123456",
+            "minuteint": 10,
+            "rtdint": 30,
+            "delaytime": 0,
+            "retranstime": 0
+        }
+    ],
+    "uiocom": [],
+    "uiotcp": [
+        {
+            "logicname": "dtsch_1",
+            "host": "192.168.56.1",
+            "port": 201,
+            "udpflag": false
+        }
+    ]
+}

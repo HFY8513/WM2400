@@ -1,0 +1,5 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+HACH_AMTAXSC_NH4N,D,0,氨氮,
+HACH_NPW160_NP,D,0,总氮,
+HACH_NPW160_NP,D,1,总磷,
+HACH_COD203A_COD,D,0,Codmn,

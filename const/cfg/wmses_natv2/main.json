@@ -1,0 +1,20 @@
+{
+    "cmdport": 9300,
+    "db": {
+        "database": "zendb",
+        "host": "127.0.0.1",
+        "password": "zeei",
+        "port": 3306,
+        "user": "root"
+    },
+    "model": "wms",
+    "name": "国家水站",
+    "sitelist": [
+        {
+            "name": "未命名测点1",
+            "stationid": 1,
+            "sysid": 32
+        }
+    ],
+    "usecmdserver": true
+}

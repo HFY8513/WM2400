@@ -1,0 +1,41 @@
+{
+    "systemlist": [
+        {
+            "systemid": 0,
+            "name": "",
+            "measuretype": 0,
+            "measuerint": 4,
+            "measuertime": 110,
+            "epcmodule": "PLC",
+            "usemeasuretrig": true,
+            "trigmode": 1,
+            "trigflowlimt": 0,
+            "trigtimerange": "",
+            "usesampler": true,
+            "samplemode": 3,
+            "samplequantity": 500,
+            "samplerate": 0,
+            "sampler": "SAMPER",
+            "lwsparam": {
+                "recdev": "",
+                "standtime": 0,
+                "pumpturntime": 0,
+                "pumpoptime": 0,
+                "trigercount": 100
+            },
+            "qcparam": {
+                "recovmixduration": 45,
+                "recovanalyduration": 60,
+                "srusampbottle": false
+            },
+            "dailystarttime": 0,
+            "electrodetime": 20
+        }
+    ],
+    "modelnodelist": [
+        {
+            "systemid": 0,
+            "stationid": 1
+        }
+    ]
+}

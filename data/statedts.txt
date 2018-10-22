@@ -1,0 +1,1 @@
+Dtsstate:dtsid=1,name=dtsch_1,stationid=1,mn=BAHB0001,inftype=1,ptotocol=gbt212,state=0;&&

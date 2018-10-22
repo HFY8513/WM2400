@@ -1,0 +1,30 @@
+{
+    "instid": 0,
+    "tchlist": [
+        {
+            "stationid": 1,
+            "tchid": 1,
+            "protocol": "gbt212",
+            "inftype": 0,
+            "logicname": "dtsch_1",
+            "flowunit": "",
+            "mn": "BAHB0001",
+            "pw": "123456",
+            "minuteint": 10,
+            "rtdint": 30,
+            "delaytime": 0,
+            "retranstime": 0
+        }
+    ],
+    "uiocom": [
+        {
+            "logicname": "dtsch_1",
+            "phyname": "COM2",
+            "baud_rate": 9600,
+            "byte_size": 8,
+            "parity": 0,
+            "stop_bits": 0
+        }
+    ],
+    "uiotcp": []
+}

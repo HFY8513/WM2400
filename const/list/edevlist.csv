@@ -1,0 +1,26 @@
+制造商ID,设备型号,系统ID,设备类型,协议ID,设备能力,别名,备注
+zeei,EADM7017,0,0,ADM7017,1,,[S]TCP方式的7017采集
+zeei,LIAOWANG,0,0,LIAOWANG,1,,[S]四川嘹望扬尘噪声
+zeei,GBT212,0,0,GBT212,1,,[S]国标接收
+zeei,AIHUA,0,0,AIHUA,1,,[S]爱华噪声
+zeei,GBT212_SJ,0,0,GBT212_SJ,1,,[S]苏净环保扬尘噪声
+zeei,C2000M2IA,0,0,C2000M2IA,1,,C2000M2IA协议
+zeei,DB_DKLZP,0,0,DB_DKLZP,1,,禾信单颗粒质谱仪
+zeei,DB_LNYK,0,0,DB_LNYK,1,,中大数据库采集协议
+zeei,DB_ODBC,0,0,DB_ODBC,1,,安徽泽安数据库采集协议
+zeei,DB_ONLINEMONITOR,0,0,DB_ONLINEMONITOR,1,,广西聚光一体化站房协议
+zeei,DB_TIANJIN,0,0,DB_TIANJIN,1,,组分网天津站协议
+zeei,DB_XMSZ,0,0,DB_XMSZ,1,,厦门水站数据库采集协议
+zeei,DBIFIX,0,0,DBIFIX,1,,龙华污水厂中控协议
+zeei,DBMY_KRX,0,0,DBMY_KRX,1,,四川绵阳太平子镇数据库协议
+zeei,FACEOP300,0,0,FACEOP300,1,,泰兴边界站协议
+zeei,LANDUN,0,0,LANDUN,1,,蓝盾空气站协议
+zeei,OCEC,0,0,OCEC,1,,Sunset 在线OCEC分析仪
+zeei,SMPS,0,0,SMPS,1,,SMPS粒径谱仪
+zeei,WPS,0,0,WPS,1,,WPS粒径谱仪
+zeei,XG-1000,0,0,XG-1000,1,,XG-1000消光仪
+zeei,AIRCONC,0,0,AIRCONC,1,,万通Marga水溶性离子分析仪
+zeei,AIRCONC_XLS,0,0,AIRCONC_XLS,1,,赛默飞URG水溶性离子分析仪
+zeei,SJZ_DATASYNCHRO,0,0,SJZ_DATASYNCHRO,1,,石家庄平台数据同步协议
+zeei,ZHJYSN,0,0,ZHJYSN,1,,石家庄赞皇金隅水泥中控协议
+zeei,XBPDC,0,0,XBPDC,1,,石家庄西柏坡电厂协议

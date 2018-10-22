@@ -1,0 +1,81 @@
+{
+    "systemlist": [
+        {
+            "airexcess_k": 1.4,
+            "dehumidity": false,
+            "localpressure": 101.325,
+            "localpressureagent": true,
+            "measuerint": 0,
+            "measuretype": 0,
+            "name": "未命名分析系统0",
+            "pressureratiolimit": 0.53,
+            "systemid": 0,
+            "fchlist": [
+                {
+                    "fid": "U000002",
+                    "devmax": 0,
+                    "devmin": 0,
+                    "intercept": 0,
+                    "rangelimit": false,
+                    "slope": 1,
+                    "slopeflag": true
+                },
+                {
+                    "fid": "U000003",
+                    "devmax": 0,
+                    "devmin": 0,
+                    "intercept": 0,
+                    "rangelimit": false,
+                    "slope": 1,
+                    "slopeflag": true
+                },
+                {
+                    "fid": "U000039",
+                    "devmax": 0,
+                    "devmin": 0,
+                    "intercept": 0,
+                    "rangelimit": false,
+                    "slope": 1,
+                    "slopeflag": true
+                },
+                {
+                    "fid": "U000038",
+                    "devmax": 0,
+                    "devmin": 0,
+                    "intercept": 0,
+                    "rangelimit": false,
+                    "slope": 1,
+                    "slopeflag": true
+                }
+            ]
+        }
+    ],
+    "modelnodelist": [
+        {
+            "antiblowint": 0,
+            "antiblowtime": 5,
+            "dilutionratio": 100,
+            "epcmodule": "adm7060_01",
+            "humidity": 4,
+            "humidityagent": false,
+            "molecularweight": 30,
+            "noxcalich": 2,
+            "o2ratio": 8,
+            "o2ratioagent": false,
+            "pitottube_k": 0.84,
+            "pressuremode": 0,
+            "samplech": 3,
+            "sectionarea": 10.6,
+            "so2calich": 1,
+            "speed_k": 1,
+            "stationid": 1,
+            "stopboiler": true,
+            "stopfactormode": 3,
+            "stopo2ratio": 19,
+            "stopspeed": 0,
+            "stoptemperature": 40,
+            "systemid": 0,
+            "zerocalich": 0
+        }
+    ]
+}

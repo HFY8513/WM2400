@@ -1,0 +1,13 @@
+系统ID,模板名称,模板ID
+31,烟气站配置模板(HORIBA),cems_horiba
+31,烟气站配置模板(KN),cems_kn
+22,空气站配置模板(HORIBA),aqms_horiba
+22,空气站配置模板(KN),aqms_kn
+32,污染源水(ZEEI),wmsps_zeei
+32,污染源水(一企一管),wmsps_drain
+21,地表水站(ZEEI),wmses_zeei
+101,超级站配置模板,sups_craes
+51,工况配置模板(OPC),ipms_opc
+102,VOC配置模板(pn),vocs_pn
+21,国家地表水站(ZEEI),wmses_natzeei
+21,测试地表水站(ZEEI),wmses_natv2

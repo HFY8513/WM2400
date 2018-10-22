@@ -1,0 +1,6 @@
+设备型号,通道类型,通道编号,通道名称,通道标示
+KEZE_K100_PH,D,0,PH,
+KEZE_K100_WT,D,0,水温,
+KEZE_K100_CDU,D,0,电导率,
+KEZE_K100_TUR,D,0,浊度,
+KEZE_K100_OXY,D,0,溶解氧,

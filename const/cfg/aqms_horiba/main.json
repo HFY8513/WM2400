@@ -1,0 +1,20 @@
+{
+    "cmdport": 9300,
+    "db": {
+        "database": "zendb",
+        "host": "127.0.0.1",
+        "password": "zeei",
+        "port": 3306,
+        "user": "root"
+    },
+    "model": "aqms",
+    "name": "空气站",
+    "sitelist": [
+        {
+            "name": "",
+            "stationid": 1,
+            "sysid": 22
+        }
+    ],
+    "usecmdserver": true
+}
