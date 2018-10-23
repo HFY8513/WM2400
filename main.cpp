@@ -6,64 +6,13 @@
 #include <QFile>
 #include <QtSql>
 #include <QWidget>
-#include <QDir>
 #include <qdebug.h>
+
 #include "global.h"
-#include "oss/utils/dsm/dsmdqi_sqlite.h"
-#include "oss/utils/dsm/dsmdqi_mysql.h"
-#include "oss/utils/dsm/dsmuci.h"
-#include "oss/utils/dsm/dsmparam.h"
-#include "oss/utils/udbi/dbcont/dbcont.h"
+#include "app.h"
 
-extern dqi* mydqi;
-char dbmode[DM_MODULENAME_SIZE];
-appmain_param mainparam;
 utrace g_qttrace;
-int sysid;  //系统id
 char m_appdir[512];     //当前工作路径
-
-int mydqiinit(utrace* mytrace)
-{
-
-    uci myuci;
-    dbcont_param m_dbparam;
-    dsm_rtdlast m_rtdlastdata;
-    memset(&mainparam, 0, sizeof(mainparam));
-
-    if (myuci.init(mytrace, m_appdir) != 0)
-    {
-        return -2;
-    }
-
-    if (myuci.readmain(&mainparam) != 0)
-    {
-        mytrace->write(TRACE_INFO,"dsmtk loadconfig fail!");
-        return -3;
-    }
-
-    mytrace->write(TRACE_INFO,"dsmtk loadconfig success!");
-
-    strncpy(dbmode, mainparam.dbmode, sizeof(dbmode)-1);
-    m_dbparam = mainparam.dbparam;
-
-    sysid = mainparam.mnodeparams[0].sysid;
-
-    if (strcmp(dbmode, "sqlite") == 0)
-    {
-        mydqi = new dqi_sqlite;
-    }
-    else
-    {
-        mydqi = new dqi_mysql;
-    }
-
-    if (mydqi->init(&m_dbparam) != 0)
-    {
-        return -4;
-    }
-    qDebug()<<"连接sqlite成功！";
-    return 0;
-}
 
 int main(int argc, char *argv[])
 {
@@ -96,22 +45,26 @@ int main(int argc, char *argv[])
     a.setFont(QFont("Microsoft Yahei", 9));
     ZEEI_WM_Init::Instance()->start();
 
-    QString dir = QDir::currentPath();
-    dir.append("/");
-    QByteArray ba = dir.toLatin1();
-    strcpy(m_appdir,ba.data());
-    g_qttrace.init("D:\\ZE-WM2400-build-desktop-Qt_4_8_4__4_8_4____\\data\\sys.log",TRACE_DEBUG);
-    if(mydqiinit(&g_qttrace) != 0);
-//        qDebug()<<"连接数据库失败，可能没有main.json或者数据库不存在！";
-
     //打开数据库,整个应用程序可用
-    QSqlDatabase dbConn = QSqlDatabase::addDatabase("QMYSQL");
-    dbConn.setHostName(mainparam.dbparam.server_name);
-    dbConn.setDatabaseName(mainparam.dbparam.db_name); // 数据库
-    dbConn.setUserName(mainparam.dbparam.user_name); // 用户名
-    dbConn.setPassword(mainparam.dbparam.user_passwd); // 用户的密码
+    App::initApp();
+    strcpy(m_appdir,App::g_appdir);
+    g_qttrace.init("D:\\ZE_WM2400\\data\\sys.log",TRACE_DEBUG);
+    QSqlDatabase dbConn;
+    if(QLatin1String(App::g_mainparam.dbmode) == "")
+    {
+        dbConn = QSqlDatabase::addDatabase("QMYSQL");
+        dbConn.setHostName(App::g_mainparam.dbparam.server_name);
+        dbConn.setDatabaseName(App::g_mainparam.dbparam.db_name); // 数据库
+        dbConn.setUserName(App::g_mainparam.dbparam.user_name); // 用户名
+        dbConn.setPassword(App::g_mainparam.dbparam.user_passwd); // 用户的密码
+    }
+    else
+    {
+        dbConn = QSqlDatabase::addDatabase("QSQLITE");
+        dbConn.setDatabaseName(qApp->applicationDirPath() + "/zendb.db");
+    }
 
-   // dbConn.setDatabaseName(qApp->applicationDirPath() + "/zendb.db");
+
     if (dbConn.open()) {
         qDebug() << "连接数据库成功!";
     } else {

@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'wm_setup_das.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created: Tue Oct 23 10:26:31 2018
+**      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/

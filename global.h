@@ -11,10 +11,6 @@
 
 #include "oss/utils/udbi/dbcont/dbcont.h"
 
-static appdas_param g_dasparam;
-static appdts_param g_dtsparam;
-static appmain_param g_mainparam;
-
 typedef struct AddStationMsg{
     QString stationidedit;
     QString stationnameedit;

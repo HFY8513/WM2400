@@ -3,14 +3,16 @@
 
 #include <QWidget>
 #include <QTreeWidgetItem>
+#include <QItemDelegate>
+#include <QComboBox>
+#include <QList>
+
 #include "oss/utils/dsm/dsmuci.h"
 #include "oss/utils/dsm/dsmparam.h"
 #include "oss/utils/uio/uiophy_com.h"
 #include "oss/common/loadcsv.h"
 #include "global.h"
-#include <QItemDelegate>
-#include <QComboBox>
-#include <QList>
+#include "app.h"
 
 class ItemDelegate:public QItemDelegate
 {
@@ -52,11 +54,8 @@ private:
 
     appmain_param m_mainparam;
     appdas_param m_dasparam;
-    dtplist_map m_fidmaps[MAX_DAQ_ITEM];
 
 signals:
-
-
 
 };
 

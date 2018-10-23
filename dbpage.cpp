@@ -406,20 +406,19 @@ void DbPage::bindData(const QString &sql)
 
 void DbPage::showCurrve(const QString &sql)
 {
-    resultCurrent =2880;
     tempSql = QString("select %1 from %2 %3  %4").arg(selectColumn).arg(tableName).arg(whereSql).arg(groupSql);
     QString sql1 = QString("%1 limit %2,%3;").arg(tempSql).arg(startIndex).arg("2880"); //组织分页SQL语句
 
     customPlot->clearGraphs();
     customPlot->replot();
-    QVector<double> x(resultCurrent);
+    QVector<double> x(2880);
 
 
     for(int i=0; i<fidcount; i++)
     {
         QSqlQuery query(QSqlDatabase::database(connName));
         query.exec(sql1);
-        QVector<double> y(resultCurrent);
+        QVector<double> y(2880);
         int ycount=0;
         int xcount=0;
 

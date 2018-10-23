@@ -1,7 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_devctrl.ui'
 **
-** Created by: Qt User Interface Compiler version 4.8.7
+** Created: Tue Oct 23 15:30:03 2018
+**      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -38,9 +39,9 @@ public:
     QWidget *page1;
     QGridLayout *gridLayout;
     QTabWidget *tabWidget;
-    QWidget *tab;
-    QWidget *tab_2;
-    QWidget *tab_3;
+    QWidget *analyCtrl;
+    QWidget *analyLog;
+    QWidget *analyAlarm;
     QWidget *page2;
     QGridLayout *gridLayout_3;
     QTabWidget *tabWidget_2;
@@ -63,15 +64,15 @@ public:
         ZEEI_WM_DEVCTRL->resize(1440, 800);
         gridLayout_2 = new QGridLayout(ZEEI_WM_DEVCTRL);
         gridLayout_2->setSpacing(0);
-        gridLayout_2->setContentsMargins(0, 0, 0, 0);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_2->setContentsMargins(0, 0, 0, 0);
         widgetLeftConfig = new QWidget(ZEEI_WM_DEVCTRL);
         widgetLeftConfig->setObjectName(QString::fromUtf8("widgetLeftConfig"));
         widgetLeftConfig->setMaximumSize(QSize(190, 16777215));
         verticalLayout_3 = new QVBoxLayout(widgetLeftConfig);
         verticalLayout_3->setSpacing(0);
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         tbtnConfig1 = new QToolButton(widgetLeftConfig);
         tbtnConfig1->setObjectName(QString::fromUtf8("tbtnConfig1"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
@@ -114,22 +115,22 @@ public:
         page1->setObjectName(QString::fromUtf8("page1"));
         gridLayout = new QGridLayout(page1);
         gridLayout->setSpacing(0);
-        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         tabWidget = new QTabWidget(page1);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setFont(font);
         tabWidget->setStyleSheet(QString::fromUtf8(""));
         tabWidget->setIconSize(QSize(32, 32));
-        tab = new QWidget();
-        tab->setObjectName(QString::fromUtf8("tab"));
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QString::fromUtf8("tab_2"));
-        tabWidget->addTab(tab_2, QString());
-        tab_3 = new QWidget();
-        tab_3->setObjectName(QString::fromUtf8("tab_3"));
-        tabWidget->addTab(tab_3, QString());
+        analyCtrl = new QWidget();
+        analyCtrl->setObjectName(QString::fromUtf8("analyCtrl"));
+        tabWidget->addTab(analyCtrl, QString());
+        analyLog = new QWidget();
+        analyLog->setObjectName(QString::fromUtf8("analyLog"));
+        tabWidget->addTab(analyLog, QString());
+        analyAlarm = new QWidget();
+        analyAlarm->setObjectName(QString::fromUtf8("analyAlarm"));
+        tabWidget->addTab(analyAlarm, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -138,8 +139,8 @@ public:
         page2->setObjectName(QString::fromUtf8("page2"));
         gridLayout_3 = new QGridLayout(page2);
         gridLayout_3->setSpacing(0);
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
         tabWidget_2 = new QTabWidget(page2);
         tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
         tabWidget_2->setFont(font);
@@ -159,8 +160,8 @@ public:
         page3->setObjectName(QString::fromUtf8("page3"));
         gridLayout_4 = new QGridLayout(page3);
         gridLayout_4->setSpacing(0);
-        gridLayout_4->setContentsMargins(0, 0, 0, 0);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
         tabWidget_3 = new QTabWidget(page3);
         tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
         tabWidget_3->setFont(font);
@@ -208,9 +209,9 @@ public:
         tbtnConfig1->setText(QApplication::translate("ZEEI_WM_DEVCTRL", "\345\210\206\346\236\220\345\215\225\345\205\203", 0, QApplication::UnicodeUTF8));
         tbtnConfig2->setText(QApplication::translate("ZEEI_WM_DEVCTRL", "\347\225\231\346\240\267\345\215\225\345\205\203", 0, QApplication::UnicodeUTF8));
         tbtnConfig3->setText(QApplication::translate("ZEEI_WM_DEVCTRL", "\350\264\250\346\216\247\345\215\225\345\205\203", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\346\227\245\345\277\227", 0, QApplication::UnicodeUTF8));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\345\221\212\350\255\246", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(analyCtrl), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(analyLog), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\346\227\245\345\277\227", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(analyAlarm), QApplication::translate("ZEEI_WM_DEVCTRL", "\344\273\252\345\231\250\345\221\212\350\255\246", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("ZEEI_WM_DEVCTRL", "\347\225\231\346\240\267\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QApplication::translate("ZEEI_WM_DEVCTRL", "\347\225\231\346\240\267\350\256\260\345\275\225  ", 0, QApplication::UnicodeUTF8));
         tabWidget_3->setTabText(tabWidget_3->indexOf(tab_6), QApplication::translate("ZEEI_WM_DEVCTRL", "\350\264\250\346\216\247\345\217\202\346\225\260\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));

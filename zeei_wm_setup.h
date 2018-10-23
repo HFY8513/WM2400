@@ -7,7 +7,7 @@
 #include "oss/utils/dsm/dsmuci.h"
 #include "oss/common/loadcsv.h"
 #include "global.h"
-
+#include "app.h"
 
 namespace Ui {
 class ZEEI_WM_SETUP;

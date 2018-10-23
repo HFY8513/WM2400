@@ -24,7 +24,10 @@ ZEEI_WM_SETUP::~ZEEI_WM_SETUP()
 }
 void ZEEI_WM_SETUP::initPage()
 {
-    readJson();
+    m_mainparam = App::g_mainparam;
+    m_dtsparam  = App::g_dtsparam;
+//    memccpy(&m_mainparam,&(App::g_mainparam),sizeof(appmain_param));
+    //readJson();
     initMainPage();
     initSitePage();
     initDtsPage();

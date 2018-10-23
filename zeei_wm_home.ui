@@ -374,7 +374,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="ZEEI_WM_DataQuery" name="page1"/>
+     <widget class="ZEEI_WM_DbQuery" name="page1"/>
      <widget class="ZEEI_WM_SETUP" name="page2"/>
      <widget class="ZEEI_WM_SYSCTRL" name="page3"/>
      <widget class="ZEEI_WM_DEVCTRL" name="page4"/>
@@ -623,9 +623,9 @@ background:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:1,stop:0 #3366FF,stop:1 
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>ZEEI_WM_DataQuery</class>
+   <class>ZEEI_WM_DbQuery</class>
    <extends>QWidget</extends>
-   <header>zeei_wm_dataquery.h</header>
+   <header>zeei_wm_dbquery.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>

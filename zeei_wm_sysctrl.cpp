@@ -39,34 +39,31 @@ void ZEEI_WM_SYSCTRL::initLeftConfig()
 
 void ZEEI_WM_SYSCTRL::initSysCfg()
 {
-    uci myuci;
-    char appdir[DM_FILEPATH_SIZE];
-    strcpy(appdir,m_appdir);
-    myuci.init(&g_qttrace, appdir);
+//    uci myuci;
+//    char appdir[DM_FILEPATH_SIZE];
+//    strcpy(appdir,m_appdir);
+//    myuci.init(&g_qttrace, appdir);
 
-    memset(&m_mainparam, 0, sizeof(m_mainparam));
-    if (myuci.readmain(&m_mainparam) != 0)
-    {
-        g_qttrace.write(TRACE_INFO,"mainjson loadconfig fail!");
-    }
+//    memset(&m_mainparam, 0, sizeof(m_mainparam));
+//    if (myuci.readmain(&m_mainparam) != 0)
+//    {
+//        g_qttrace.write(TRACE_INFO,"mainjson loadconfig fail!");
+//    }
 
-    memset(&m_dasparam,0,sizeof(m_dasparam));
-    if(myuci.readdas(&m_dasparam) != 0)
-    {
-        g_qttrace.write(TRACE_INFO,"dasjson loadconfig fail!");
-    }
+//    memset(&m_dasparam,0,sizeof(m_dasparam));
+//    if(myuci.readdas(&m_dasparam) != 0)
+//    {
+//        g_qttrace.write(TRACE_INFO,"dasjson loadconfig fail!");
+//    }
 
-    memset(&m_dasparam,0,sizeof(m_dasparam));
-    if(myuci.readdas(&m_dasparam) != 0)
-    {
-        g_qttrace.write(TRACE_INFO,"dasjson loadconfig fail!");
-    }
-
-    memset(&m_wmsparam,0,sizeof(m_wmsparam));
-    if(myuci.readwms(&m_wmsparam) != 0)
-    {
-        g_qttrace.write(TRACE_INFO,"wmsjson loadconfig fail!");
-    }
+//    memset(&m_wmsparam,0,sizeof(m_wmsparam));
+//    if(myuci.readwms(&m_wmsparam) != 0)
+//    {
+//        g_qttrace.write(TRACE_INFO,"wmsjson loadconfig fail!");
+//    }
+    m_mainparam = App::g_mainparam;
+    m_dasparam  = App::g_dasparam;
+    m_wmsparam  = App::g_wmsparam;
 
     QStringList typeList;
     typeList <<"常规水站" <<"常规污染源" <<"一企一管";

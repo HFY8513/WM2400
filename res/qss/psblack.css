@@ -13,7 +13,7 @@ QWidget[form="bottom"] .QFrame{
 border:1px solid #DCDCDC;
 }
 
-QWidget[form="dataQueryLeft"]{
+QWidget[form="dbQueryLeft"]{
 	border-style:solid;
 	border-radius:0px;
 	border-width:0px 0px 0px 5px;

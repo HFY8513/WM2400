@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_home.ui'
 **
-** Created: Mon Oct 22 11:31:11 2018
+** Created: Tue Oct 23 16:06:43 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -25,7 +25,7 @@
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 #include <zeei_wm_devctrl.h>
-#include "zeei_wm_dataquery.h"
+#include "zeei_wm_dbquery.h"
 #include "zeei_wm_setup.h"
 #include "zeei_wm_sysctrl.h"
 
@@ -55,7 +55,7 @@ public:
     QPushButton *btnMenu_Close;
     QPushButton *btnMenu_Max;
     QStackedWidget *stackedWidget;
-    ZEEI_WM_DataQuery *page1;
+    ZEEI_WM_DbQuery *page1;
     ZEEI_WM_SETUP *page2;
     ZEEI_WM_SYSCTRL *page3;
     ZEEI_WM_DEVCTRL *page4;
@@ -261,7 +261,7 @@ public:
         stackedWidget = new QStackedWidget(ZEEI_WM_HOME);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         stackedWidget->setStyleSheet(QString::fromUtf8(""));
-        page1 = new ZEEI_WM_DataQuery();
+        page1 = new ZEEI_WM_DbQuery();
         page1->setObjectName(QString::fromUtf8("page1"));
         stackedWidget->addWidget(page1);
         page2 = new ZEEI_WM_SETUP();

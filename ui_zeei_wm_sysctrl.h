@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_sysctrl.ui'
 **
-** Created: Thu Oct 18 14:55:26 2018
+** Created: Tue Oct 23 16:19:47 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -17,6 +17,7 @@
 #include <QtGui/QComboBox>
 #include <QtGui/QDateTimeEdit>
 #include <QtGui/QGridLayout>
+#include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
@@ -44,31 +45,33 @@ public:
     QSpacerItem *verticalSpacer_4;
     QStackedWidget *stackedWidget;
     QWidget *page1;
-    QPushButton *pbtn_save;
-    QWidget *layoutWidget;
+    QGridLayout *gridLayout_6;
+    QGroupBox *groupBox;
     QGridLayout *gridLayout;
     QLabel *label;
     QLineEdit *led_measuerint;
     QLabel *label_2;
     QLineEdit *led_measuertime;
     QLabel *label_3;
+    QComboBox *cmb_epcmodule;
     QLabel *label_4;
+    QComboBox *cmb_measuretype;
     QLabel *label_5;
     QLineEdit *led_dailystarttime;
-    QComboBox *cmb_epcmodule;
-    QComboBox *cmb_measuretype;
-    QWidget *layoutWidget1;
-    QGridLayout *gridLayout_3;
-    QLabel *label_6;
-    QLabel *label_7;
-    QLineEdit *led_trigflowlimt;
-    QComboBox *cmb_trigmode;
-    QWidget *layoutWidget2;
+    QGroupBox *groupBox_3;
     QGridLayout *gridLayout_5;
     QLabel *label_8;
     QComboBox *cmb_electrodemode;
     QLabel *label_9;
     QLineEdit *led_electrodetime;
+    QGroupBox *groupBox_2;
+    QGridLayout *gridLayout_3;
+    QLabel *label_6;
+    QComboBox *cmb_trigmode;
+    QLabel *label_7;
+    QLineEdit *led_trigflowlimt;
+    QPushButton *pbtn_save;
+    QSpacerItem *verticalSpacer;
     QWidget *page2;
     QTableWidget *tableWidget;
     QTableWidget *tableWidget_2;
@@ -140,17 +143,13 @@ public:
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
         page1 = new QWidget();
         page1->setObjectName(QString::fromUtf8("page1"));
-        pbtn_save = new QPushButton(page1);
-        pbtn_save->setObjectName(QString::fromUtf8("pbtn_save"));
-        pbtn_save->setGeometry(QRect(480, 540, 351, 41));
-        pbtn_save->setFont(font);
-        layoutWidget = new QWidget(page1);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(480, 68, 338, 251));
-        gridLayout = new QGridLayout(layoutWidget);
+        gridLayout_6 = new QGridLayout(page1);
+        gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        groupBox = new QGroupBox(page1);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        gridLayout = new QGridLayout(groupBox);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(layoutWidget);
+        label = new QLabel(groupBox);
         label->setObjectName(QString::fromUtf8("label"));
         label->setMinimumSize(QSize(0, 30));
         label->setFont(font);
@@ -158,14 +157,14 @@ public:
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
-        led_measuerint = new QLineEdit(layoutWidget);
+        led_measuerint = new QLineEdit(groupBox);
         led_measuerint->setObjectName(QString::fromUtf8("led_measuerint"));
         led_measuerint->setMinimumSize(QSize(0, 30));
         led_measuerint->setFont(font);
 
         gridLayout->addWidget(led_measuerint, 0, 1, 1, 1);
 
-        label_2 = new QLabel(layoutWidget);
+        label_2 = new QLabel(groupBox);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setMinimumSize(QSize(0, 30));
         label_2->setFont(font);
@@ -173,14 +172,14 @@ public:
 
         gridLayout->addWidget(label_2, 1, 0, 1, 1);
 
-        led_measuertime = new QLineEdit(layoutWidget);
+        led_measuertime = new QLineEdit(groupBox);
         led_measuertime->setObjectName(QString::fromUtf8("led_measuertime"));
         led_measuertime->setMinimumSize(QSize(0, 30));
         led_measuertime->setFont(font);
 
         gridLayout->addWidget(led_measuertime, 1, 1, 1, 1);
 
-        label_3 = new QLabel(layoutWidget);
+        label_3 = new QLabel(groupBox);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setMinimumSize(QSize(0, 30));
         label_3->setFont(font);
@@ -188,7 +187,13 @@ public:
 
         gridLayout->addWidget(label_3, 2, 0, 1, 1);
 
-        label_4 = new QLabel(layoutWidget);
+        cmb_epcmodule = new QComboBox(groupBox);
+        cmb_epcmodule->setObjectName(QString::fromUtf8("cmb_epcmodule"));
+        cmb_epcmodule->setFont(font);
+
+        gridLayout->addWidget(cmb_epcmodule, 2, 1, 1, 1);
+
+        label_4 = new QLabel(groupBox);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setMinimumSize(QSize(0, 30));
         label_4->setFont(font);
@@ -196,7 +201,13 @@ public:
 
         gridLayout->addWidget(label_4, 3, 0, 1, 1);
 
-        label_5 = new QLabel(layoutWidget);
+        cmb_measuretype = new QComboBox(groupBox);
+        cmb_measuretype->setObjectName(QString::fromUtf8("cmb_measuretype"));
+        cmb_measuretype->setFont(font);
+
+        gridLayout->addWidget(cmb_measuretype, 3, 1, 1, 1);
+
+        label_5 = new QLabel(groupBox);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setMinimumSize(QSize(0, 30));
         label_5->setFont(font);
@@ -204,67 +215,21 @@ public:
 
         gridLayout->addWidget(label_5, 4, 0, 1, 1);
 
-        led_dailystarttime = new QLineEdit(layoutWidget);
+        led_dailystarttime = new QLineEdit(groupBox);
         led_dailystarttime->setObjectName(QString::fromUtf8("led_dailystarttime"));
         led_dailystarttime->setMinimumSize(QSize(0, 30));
         led_dailystarttime->setFont(font);
 
         gridLayout->addWidget(led_dailystarttime, 4, 1, 1, 1);
 
-        cmb_epcmodule = new QComboBox(layoutWidget);
-        cmb_epcmodule->setObjectName(QString::fromUtf8("cmb_epcmodule"));
-        cmb_epcmodule->setFont(font);
 
-        gridLayout->addWidget(cmb_epcmodule, 2, 1, 1, 1);
+        gridLayout_6->addWidget(groupBox, 0, 0, 1, 1);
 
-        cmb_measuretype = new QComboBox(layoutWidget);
-        cmb_measuretype->setObjectName(QString::fromUtf8("cmb_measuretype"));
-        cmb_measuretype->setFont(font);
-
-        gridLayout->addWidget(cmb_measuretype, 3, 1, 1, 1);
-
-        layoutWidget1 = new QWidget(page1);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(480, 350, 348, 68));
-        gridLayout_3 = new QGridLayout(layoutWidget1);
-        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
-        label_6 = new QLabel(layoutWidget1);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setMinimumSize(QSize(0, 30));
-        label_6->setFont(font);
-        label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_3->addWidget(label_6, 0, 0, 1, 1);
-
-        label_7 = new QLabel(layoutWidget1);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setMinimumSize(QSize(0, 30));
-        label_7->setFont(font);
-        label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_3->addWidget(label_7, 1, 0, 1, 1);
-
-        led_trigflowlimt = new QLineEdit(layoutWidget1);
-        led_trigflowlimt->setObjectName(QString::fromUtf8("led_trigflowlimt"));
-        led_trigflowlimt->setMinimumSize(QSize(0, 30));
-        led_trigflowlimt->setFont(font);
-
-        gridLayout_3->addWidget(led_trigflowlimt, 1, 1, 1, 1);
-
-        cmb_trigmode = new QComboBox(layoutWidget1);
-        cmb_trigmode->setObjectName(QString::fromUtf8("cmb_trigmode"));
-        cmb_trigmode->setFont(font);
-
-        gridLayout_3->addWidget(cmb_trigmode, 0, 1, 1, 1);
-
-        layoutWidget2 = new QWidget(page1);
-        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(480, 450, 351, 68));
-        gridLayout_5 = new QGridLayout(layoutWidget2);
+        groupBox_3 = new QGroupBox(page1);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        gridLayout_5 = new QGridLayout(groupBox_3);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        gridLayout_5->setContentsMargins(0, 0, 0, 0);
-        label_8 = new QLabel(layoutWidget2);
+        label_8 = new QLabel(groupBox_3);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setMinimumSize(QSize(0, 30));
         label_8->setFont(font);
@@ -272,13 +237,13 @@ public:
 
         gridLayout_5->addWidget(label_8, 0, 0, 1, 1);
 
-        cmb_electrodemode = new QComboBox(layoutWidget2);
+        cmb_electrodemode = new QComboBox(groupBox_3);
         cmb_electrodemode->setObjectName(QString::fromUtf8("cmb_electrodemode"));
         cmb_electrodemode->setFont(font);
 
         gridLayout_5->addWidget(cmb_electrodemode, 0, 1, 1, 1);
 
-        label_9 = new QLabel(layoutWidget2);
+        label_9 = new QLabel(groupBox_3);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setMinimumSize(QSize(0, 30));
         label_9->setFont(font);
@@ -286,14 +251,67 @@ public:
 
         gridLayout_5->addWidget(label_9, 1, 0, 1, 1);
 
-        led_electrodetime = new QLineEdit(layoutWidget2);
+        led_electrodetime = new QLineEdit(groupBox_3);
         led_electrodetime->setObjectName(QString::fromUtf8("led_electrodetime"));
         led_electrodetime->setMinimumSize(QSize(0, 30));
         led_electrodetime->setFont(font);
 
         gridLayout_5->addWidget(led_electrodetime, 1, 1, 1, 1);
 
+
+        gridLayout_6->addWidget(groupBox_3, 0, 1, 1, 1);
+
+        groupBox_2 = new QGroupBox(page1);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        gridLayout_3 = new QGridLayout(groupBox_2);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        label_6 = new QLabel(groupBox_2);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setMinimumSize(QSize(0, 30));
+        label_6->setFont(font);
+        label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_3->addWidget(label_6, 0, 0, 1, 1);
+
+        cmb_trigmode = new QComboBox(groupBox_2);
+        cmb_trigmode->setObjectName(QString::fromUtf8("cmb_trigmode"));
+        cmb_trigmode->setFont(font);
+
+        gridLayout_3->addWidget(cmb_trigmode, 0, 1, 1, 1);
+
+        label_7 = new QLabel(groupBox_2);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+        label_7->setMinimumSize(QSize(0, 30));
+        label_7->setFont(font);
+        label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_3->addWidget(label_7, 1, 0, 1, 1);
+
+        led_trigflowlimt = new QLineEdit(groupBox_2);
+        led_trigflowlimt->setObjectName(QString::fromUtf8("led_trigflowlimt"));
+        led_trigflowlimt->setMinimumSize(QSize(0, 30));
+        led_trigflowlimt->setFont(font);
+
+        gridLayout_3->addWidget(led_trigflowlimt, 1, 1, 1, 1);
+
+
+        gridLayout_6->addWidget(groupBox_2, 0, 2, 1, 1);
+
+        pbtn_save = new QPushButton(page1);
+        pbtn_save->setObjectName(QString::fromUtf8("pbtn_save"));
+        pbtn_save->setFont(font);
+
+        gridLayout_6->addWidget(pbtn_save, 1, 0, 1, 3);
+
+        verticalSpacer = new QSpacerItem(20, 536, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_6->addItem(verticalSpacer, 2, 1, 1, 1);
+
         stackedWidget->addWidget(page1);
+        pbtn_save->raise();
+        groupBox->raise();
+        groupBox_2->raise();
+        groupBox_3->raise();
         page2 = new QWidget();
         page2->setObjectName(QString::fromUtf8("page2"));
         tableWidget = new QTableWidget(page2);
@@ -531,16 +549,19 @@ public:
         tbtnConfig1->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\263\273\347\273\237\345\217\202\346\225\260", 0, QApplication::UnicodeUTF8));
         tbtnConfig2->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\265\201\347\250\213\346\216\247\345\210\266", 0, QApplication::UnicodeUTF8));
         tbtnConfig3->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\265\201\347\250\213\346\227\245\345\277\227", 0, QApplication::UnicodeUTF8));
-        pbtn_save->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\344\277\235\345\255\230", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\270\270\347\224\250\345\217\202\346\225\260", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\253\231\346\265\213\351\207\217\345\221\250\346\234\237(\345\260\217\346\227\266):", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\210\206\346\236\220\346\227\266\351\225\277(\345\210\206\351\222\237):", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "PLC\350\256\276\345\244\207:", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\263\273\347\273\237\347\261\273\345\236\213:", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\221\250\346\234\237\350\265\267\347\202\271(\346\225\264\347\202\271):", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\247\246\345\217\221\346\250\241\345\274\217:", 0, QApplication::UnicodeUTF8));
-        label_7->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\236\254\346\227\266\346\265\201\351\207\217\345\244\247\344\272\216(L/s):", 0, QApplication::UnicodeUTF8));
+        groupBox_3->setTitle(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\253\230\347\272\247\345\217\202\346\225\260", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\207\207\351\233\206\346\250\241\345\274\217:", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\344\272\224\345\217\202\345\210\266\346\240\267\346\227\266\351\225\277(\345\210\206\351\222\237):", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\265\213\351\207\217\350\247\246\345\217\221", 0, QApplication::UnicodeUTF8));
+        label_6->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\247\246\345\217\221\346\250\241\345\274\217:", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\236\254\346\227\266\346\265\201\351\207\217\345\244\247\344\272\216(L/s):", 0, QApplication::UnicodeUTF8));
+        pbtn_save->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\344\277\235\345\255\230\345\271\266\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

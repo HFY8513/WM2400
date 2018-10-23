@@ -2,13 +2,14 @@
 #define ZEEI_WM_SYSCTRL_H
 
 #include <QWidget>
-#include "iconhelper.h"
 #include <QDebug>
 #include "oss/utils/dsm/dsmparam.h"
 #include "oss/utils/dsm/dsmuci.h"
 #include "oss/common/loadcsv.h"
+#include "iconhelper.h"
 #include "global.h"
 #include "dbpage.h"
+#include "app.h"
 namespace Ui {
 class ZEEI_WM_SYSCTRL;
 }

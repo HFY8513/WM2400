@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_setup.ui'
 **
-** Created: Thu Oct 18 13:29:43 2018
+** Created: Tue Oct 23 17:29:08 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -15,6 +15,7 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QGridLayout>
+#include <QtGui/QGroupBox>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
@@ -48,29 +49,29 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page1;
     QGridLayout *gridLayout_8;
-    QVBoxLayout *verticalLayout_2;
+    QSpacerItem *horizontalSpacer;
+    QGroupBox *groupBox;
     QGridLayout *gridLayout_2;
     QLabel *label_1;
     QLineEdit *led_stationName;
+    QLabel *label_2;
     QLineEdit *led_rtdint;
+    QLabel *label_3;
+    QLineEdit *led_dataPeriod;
     QLabel *label_4;
     QLineEdit *led_minuteint;
     QLabel *label_5;
-    QLineEdit *led_dbIP;
     QLineEdit *led_dbName;
-    QLabel *label_3;
     QLabel *label_6;
+    QLineEdit *led_dbIP;
     QLabel *label_7;
+    QLineEdit *led_dbPort;
     QLabel *label_8;
     QLineEdit *led_dbuser;
-    QLineEdit *led_dbPort;
     QLabel *label_9;
     QLineEdit *led_dbpwd;
-    QLineEdit *led_dataPeriod;
-    QLabel *label_2;
-    QPushButton *btn_base_save;
     QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *horizontalSpacer;
+    QPushButton *btn_base_save;
     QWidget *page2;
     QGridLayout *gridLayout_4;
     QTableWidget *tabw_site;
@@ -79,18 +80,20 @@ public:
     QGridLayout *gridLayout_3;
     QTableView *tabv_dts;
     QWidget *page5;
-    QGridLayout *gridLayout_9;
-    QSpacerItem *horizontalSpacer_3;
-    QVBoxLayout *verticalLayout;
     QGridLayout *gridLayout_5;
+    QSpacerItem *horizontalSpacer_3;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *btn_gui_save;
+    QSpacerItem *verticalSpacer_2;
+    QGroupBox *groupBox_2;
+    QGridLayout *gridLayout_9;
     QLabel *label_10;
     QLineEdit *led_groupfilter;
     QLabel *label_11;
     QLineEdit *led_fidfilter;
     QLabel *label_12;
     QLineEdit *led_showmode;
-    QPushButton *btn_gui_save;
-    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer;
     QWidget *page6;
     QGridLayout *gridLayout_6;
     QTableView *tableView_3;
@@ -108,15 +111,15 @@ public:
         ZEEI_WM_SETUP->resize(1440, 800);
         gridLayout = new QGridLayout(ZEEI_WM_SETUP);
         gridLayout->setSpacing(0);
-        gridLayout->setContentsMargins(0, 0, 0, 0);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
         widgetLeftConfig = new QWidget(ZEEI_WM_SETUP);
         widgetLeftConfig->setObjectName(QString::fromUtf8("widgetLeftConfig"));
         widgetLeftConfig->setMaximumSize(QSize(190, 16777215));
         verticalLayout_3 = new QVBoxLayout(widgetLeftConfig);
         verticalLayout_3->setSpacing(0);
-        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_3->setContentsMargins(0, 0, 0, 0);
         tbtnConfig1 = new QToolButton(widgetLeftConfig);
         tbtnConfig1->setObjectName(QString::fromUtf8("tbtnConfig1"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
@@ -191,16 +194,15 @@ public:
         page1->setObjectName(QString::fromUtf8("page1"));
         gridLayout_8 = new QGridLayout(page1);
         gridLayout_8->setObjectName(QString::fromUtf8("gridLayout_8"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(0);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
-        gridLayout_2 = new QGridLayout();
+        horizontalSpacer = new QSpacerItem(404, 779, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_8->addItem(horizontalSpacer, 0, 0, 2, 1);
+
+        groupBox = new QGroupBox(page1);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        gridLayout_2 = new QGridLayout(groupBox);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        gridLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
-        gridLayout_2->setVerticalSpacing(20);
-        gridLayout_2->setContentsMargins(10, -1, -1, -1);
-        label_1 = new QLabel(page1);
+        label_1 = new QLabel(groupBox);
         label_1->setObjectName(QString::fromUtf8("label_1"));
         label_1->setMinimumSize(QSize(0, 30));
         label_1->setFont(font);
@@ -208,7 +210,7 @@ public:
 
         gridLayout_2->addWidget(label_1, 0, 0, 1, 1);
 
-        led_stationName = new QLineEdit(page1);
+        led_stationName = new QLineEdit(groupBox);
         led_stationName->setObjectName(QString::fromUtf8("led_stationName"));
         led_stationName->setMinimumSize(QSize(0, 30));
         led_stationName->setFont(font);
@@ -217,14 +219,37 @@ public:
 
         gridLayout_2->addWidget(led_stationName, 0, 1, 1, 1);
 
-        led_rtdint = new QLineEdit(page1);
+        label_2 = new QLabel(groupBox);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setMinimumSize(QSize(0, 30));
+        label_2->setFont(font);
+        label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_2->addWidget(label_2, 1, 0, 1, 1);
+
+        led_rtdint = new QLineEdit(groupBox);
         led_rtdint->setObjectName(QString::fromUtf8("led_rtdint"));
         led_rtdint->setMinimumSize(QSize(0, 30));
         led_rtdint->setFont(font);
 
         gridLayout_2->addWidget(led_rtdint, 1, 1, 1, 1);
 
-        label_4 = new QLabel(page1);
+        label_3 = new QLabel(groupBox);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setMinimumSize(QSize(0, 30));
+        label_3->setFont(font);
+        label_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_2->addWidget(label_3, 2, 0, 1, 1);
+
+        led_dataPeriod = new QLineEdit(groupBox);
+        led_dataPeriod->setObjectName(QString::fromUtf8("led_dataPeriod"));
+        led_dataPeriod->setMinimumSize(QSize(0, 30));
+        led_dataPeriod->setFont(font);
+
+        gridLayout_2->addWidget(led_dataPeriod, 2, 1, 1, 1);
+
+        label_4 = new QLabel(groupBox);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setMinimumSize(QSize(0, 30));
         label_4->setFont(font);
@@ -232,14 +257,14 @@ public:
 
         gridLayout_2->addWidget(label_4, 3, 0, 1, 1);
 
-        led_minuteint = new QLineEdit(page1);
+        led_minuteint = new QLineEdit(groupBox);
         led_minuteint->setObjectName(QString::fromUtf8("led_minuteint"));
         led_minuteint->setMinimumSize(QSize(0, 30));
         led_minuteint->setFont(font);
 
         gridLayout_2->addWidget(led_minuteint, 3, 1, 1, 1);
 
-        label_5 = new QLabel(page1);
+        label_5 = new QLabel(groupBox);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setMinimumSize(QSize(0, 30));
         label_5->setFont(font);
@@ -249,29 +274,14 @@ public:
 
         gridLayout_2->addWidget(label_5, 4, 0, 1, 1);
 
-        led_dbIP = new QLineEdit(page1);
-        led_dbIP->setObjectName(QString::fromUtf8("led_dbIP"));
-        led_dbIP->setMinimumSize(QSize(0, 30));
-        led_dbIP->setFont(font);
-
-        gridLayout_2->addWidget(led_dbIP, 5, 1, 1, 1);
-
-        led_dbName = new QLineEdit(page1);
+        led_dbName = new QLineEdit(groupBox);
         led_dbName->setObjectName(QString::fromUtf8("led_dbName"));
         led_dbName->setMinimumSize(QSize(0, 30));
         led_dbName->setFont(font);
 
         gridLayout_2->addWidget(led_dbName, 4, 1, 1, 1);
 
-        label_3 = new QLabel(page1);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setMinimumSize(QSize(0, 30));
-        label_3->setFont(font);
-        label_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout_2->addWidget(label_3, 2, 0, 1, 1);
-
-        label_6 = new QLabel(page1);
+        label_6 = new QLabel(groupBox);
         label_6->setObjectName(QString::fromUtf8("label_6"));
         label_6->setMinimumSize(QSize(0, 30));
         label_6->setFont(font);
@@ -279,7 +289,14 @@ public:
 
         gridLayout_2->addWidget(label_6, 5, 0, 1, 1);
 
-        label_7 = new QLabel(page1);
+        led_dbIP = new QLineEdit(groupBox);
+        led_dbIP->setObjectName(QString::fromUtf8("led_dbIP"));
+        led_dbIP->setMinimumSize(QSize(0, 30));
+        led_dbIP->setFont(font);
+
+        gridLayout_2->addWidget(led_dbIP, 5, 1, 1, 1);
+
+        label_7 = new QLabel(groupBox);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setMinimumSize(QSize(0, 30));
         label_7->setFont(font);
@@ -287,7 +304,14 @@ public:
 
         gridLayout_2->addWidget(label_7, 6, 0, 1, 1);
 
-        label_8 = new QLabel(page1);
+        led_dbPort = new QLineEdit(groupBox);
+        led_dbPort->setObjectName(QString::fromUtf8("led_dbPort"));
+        led_dbPort->setMinimumSize(QSize(0, 30));
+        led_dbPort->setFont(font);
+
+        gridLayout_2->addWidget(led_dbPort, 6, 1, 1, 1);
+
+        label_8 = new QLabel(groupBox);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setMinimumSize(QSize(0, 30));
         label_8->setFont(font);
@@ -295,21 +319,14 @@ public:
 
         gridLayout_2->addWidget(label_8, 7, 0, 1, 1);
 
-        led_dbuser = new QLineEdit(page1);
+        led_dbuser = new QLineEdit(groupBox);
         led_dbuser->setObjectName(QString::fromUtf8("led_dbuser"));
         led_dbuser->setMinimumSize(QSize(0, 30));
         led_dbuser->setFont(font);
 
         gridLayout_2->addWidget(led_dbuser, 7, 1, 1, 1);
 
-        led_dbPort = new QLineEdit(page1);
-        led_dbPort->setObjectName(QString::fromUtf8("led_dbPort"));
-        led_dbPort->setMinimumSize(QSize(0, 30));
-        led_dbPort->setFont(font);
-
-        gridLayout_2->addWidget(led_dbPort, 6, 1, 1, 1);
-
-        label_9 = new QLabel(page1);
+        label_9 = new QLabel(groupBox);
         label_9->setObjectName(QString::fromUtf8("label_9"));
         label_9->setMinimumSize(QSize(0, 30));
         label_9->setFont(font);
@@ -317,7 +334,7 @@ public:
 
         gridLayout_2->addWidget(label_9, 8, 0, 1, 1);
 
-        led_dbpwd = new QLineEdit(page1);
+        led_dbpwd = new QLineEdit(groupBox);
         led_dbpwd->setObjectName(QString::fromUtf8("led_dbpwd"));
         led_dbpwd->setMinimumSize(QSize(0, 30));
         led_dbpwd->setFont(font);
@@ -325,23 +342,12 @@ public:
 
         gridLayout_2->addWidget(led_dbpwd, 8, 1, 1, 1);
 
-        led_dataPeriod = new QLineEdit(page1);
-        led_dataPeriod->setObjectName(QString::fromUtf8("led_dataPeriod"));
-        led_dataPeriod->setMinimumSize(QSize(0, 30));
-        led_dataPeriod->setFont(font);
 
-        gridLayout_2->addWidget(led_dataPeriod, 2, 1, 1, 1);
+        gridLayout_8->addWidget(groupBox, 0, 1, 1, 1);
 
-        label_2 = new QLabel(page1);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setMinimumSize(QSize(0, 30));
-        label_2->setFont(font);
-        label_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        horizontalSpacer_2 = new QSpacerItem(404, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_2->addWidget(label_2, 1, 0, 1, 1);
-
-
-        verticalLayout_2->addLayout(gridLayout_2);
+        gridLayout_8->addItem(horizontalSpacer_2, 0, 2, 1, 1);
 
         btn_base_save = new QPushButton(page1);
         btn_base_save->setObjectName(QString::fromUtf8("btn_base_save"));
@@ -352,26 +358,15 @@ public:
         btn_base_save->setSizePolicy(sizePolicy1);
         btn_base_save->setFont(font);
 
-        verticalLayout_2->addWidget(btn_base_save);
-
-
-        gridLayout_8->addLayout(verticalLayout_2, 0, 1, 2, 1);
-
-        horizontalSpacer_2 = new QSpacerItem(404, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_8->addItem(horizontalSpacer_2, 0, 2, 2, 1);
-
-        horizontalSpacer = new QSpacerItem(404, 779, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_8->addItem(horizontalSpacer, 0, 0, 2, 1);
+        gridLayout_8->addWidget(btn_base_save, 1, 1, 1, 1);
 
         stackedWidget->addWidget(page1);
         page2 = new QWidget();
         page2->setObjectName(QString::fromUtf8("page2"));
         gridLayout_4 = new QGridLayout(page2);
         gridLayout_4->setSpacing(0);
-        gridLayout_4->setContentsMargins(0, 0, 0, 0);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        gridLayout_4->setContentsMargins(0, 0, 0, 0);
         tabw_site = new QTableWidget(page2);
         tabw_site->setObjectName(QString::fromUtf8("tabw_site"));
 
@@ -384,9 +379,9 @@ public:
         page4 = new QWidget();
         page4->setObjectName(QString::fromUtf8("page4"));
         gridLayout_3 = new QGridLayout(page4);
-        gridLayout_3->setContentsMargins(0, 0, 0, 0);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
         gridLayout_3->setHorizontalSpacing(0);
+        gridLayout_3->setContentsMargins(0, 0, 0, 0);
         tabv_dts = new QTableView(page4);
         tabv_dts->setObjectName(QString::fromUtf8("tabv_dts"));
 
@@ -395,75 +390,92 @@ public:
         stackedWidget->addWidget(page4);
         page5 = new QWidget();
         page5->setObjectName(QString::fromUtf8("page5"));
-        gridLayout_9 = new QGridLayout(page5);
-        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        gridLayout_5 = new QGridLayout(page5);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
         horizontalSpacer_3 = new QSpacerItem(404, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_9->addItem(horizontalSpacer_3, 0, 0, 1, 1);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        gridLayout_5 = new QGridLayout();
-        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        label_10 = new QLabel(page5);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setFont(font);
-
-        gridLayout_5->addWidget(label_10, 0, 0, 1, 1);
-
-        led_groupfilter = new QLineEdit(page5);
-        led_groupfilter->setObjectName(QString::fromUtf8("led_groupfilter"));
-        led_groupfilter->setFont(font);
-
-        gridLayout_5->addWidget(led_groupfilter, 0, 1, 1, 1);
-
-        label_11 = new QLabel(page5);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setFont(font);
-
-        gridLayout_5->addWidget(label_11, 1, 0, 1, 1);
-
-        led_fidfilter = new QLineEdit(page5);
-        led_fidfilter->setObjectName(QString::fromUtf8("led_fidfilter"));
-        led_fidfilter->setFont(font);
-
-        gridLayout_5->addWidget(led_fidfilter, 1, 1, 1, 1);
-
-        label_12 = new QLabel(page5);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font);
-
-        gridLayout_5->addWidget(label_12, 2, 0, 1, 1);
-
-        led_showmode = new QLineEdit(page5);
-        led_showmode->setObjectName(QString::fromUtf8("led_showmode"));
-        led_showmode->setFont(font);
-
-        gridLayout_5->addWidget(led_showmode, 2, 1, 1, 1);
-
-
-        verticalLayout->addLayout(gridLayout_5);
-
-        btn_gui_save = new QPushButton(page5);
-        btn_gui_save->setObjectName(QString::fromUtf8("btn_gui_save"));
-        btn_gui_save->setFont(font);
-
-        verticalLayout->addWidget(btn_gui_save);
-
-
-        gridLayout_9->addLayout(verticalLayout, 0, 1, 1, 1);
+        gridLayout_5->addItem(horizontalSpacer_3, 1, 0, 1, 1);
 
         horizontalSpacer_4 = new QSpacerItem(404, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_9->addItem(horizontalSpacer_4, 0, 2, 1, 1);
+        gridLayout_5->addItem(horizontalSpacer_4, 1, 2, 1, 1);
+
+        btn_gui_save = new QPushButton(page5);
+        btn_gui_save->setObjectName(QString::fromUtf8("btn_gui_save"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Maximum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(btn_gui_save->sizePolicy().hasHeightForWidth());
+        btn_gui_save->setSizePolicy(sizePolicy2);
+        btn_gui_save->setFont(font);
+
+        gridLayout_5->addWidget(btn_gui_save, 2, 1, 1, 1);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(verticalSpacer_2, 3, 1, 1, 1);
+
+        groupBox_2 = new QGroupBox(page5);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setMinimumSize(QSize(0, 0));
+        gridLayout_9 = new QGridLayout(groupBox_2);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        gridLayout_9->setSizeConstraint(QLayout::SetFixedSize);
+        label_10 = new QLabel(groupBox_2);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setFont(font);
+
+        gridLayout_9->addWidget(label_10, 0, 0, 1, 1);
+
+        led_groupfilter = new QLineEdit(groupBox_2);
+        led_groupfilter->setObjectName(QString::fromUtf8("led_groupfilter"));
+        led_groupfilter->setFont(font);
+
+        gridLayout_9->addWidget(led_groupfilter, 0, 1, 1, 1);
+
+        label_11 = new QLabel(groupBox_2);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setFont(font);
+
+        gridLayout_9->addWidget(label_11, 1, 0, 1, 1);
+
+        led_fidfilter = new QLineEdit(groupBox_2);
+        led_fidfilter->setObjectName(QString::fromUtf8("led_fidfilter"));
+        led_fidfilter->setFont(font);
+
+        gridLayout_9->addWidget(led_fidfilter, 1, 1, 1, 1);
+
+        label_12 = new QLabel(groupBox_2);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy3);
+        label_12->setFont(font);
+
+        gridLayout_9->addWidget(label_12, 2, 0, 1, 1);
+
+        led_showmode = new QLineEdit(groupBox_2);
+        led_showmode->setObjectName(QString::fromUtf8("led_showmode"));
+        led_showmode->setFont(font);
+
+        gridLayout_9->addWidget(led_showmode, 2, 1, 1, 1);
+
+
+        gridLayout_5->addWidget(groupBox_2, 1, 1, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Minimum);
+
+        gridLayout_5->addItem(verticalSpacer, 0, 1, 1, 1);
 
         stackedWidget->addWidget(page5);
         page6 = new QWidget();
         page6->setObjectName(QString::fromUtf8("page6"));
         gridLayout_6 = new QGridLayout(page6);
         gridLayout_6->setSpacing(0);
-        gridLayout_6->setContentsMargins(0, 0, 0, 0);
         gridLayout_6->setObjectName(QString::fromUtf8("gridLayout_6"));
+        gridLayout_6->setContentsMargins(0, 0, 0, 0);
         tableView_3 = new QTableView(page6);
         tableView_3->setObjectName(QString::fromUtf8("tableView_3"));
 
@@ -474,8 +486,8 @@ public:
         page7->setObjectName(QString::fromUtf8("page7"));
         gridLayout_7 = new QGridLayout(page7);
         gridLayout_7->setSpacing(0);
-        gridLayout_7->setContentsMargins(0, 0, 0, 0);
         gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
+        gridLayout_7->setContentsMargins(0, 0, 0, 0);
         tabWidget = new QTabWidget(page7);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setFont(font);
@@ -516,20 +528,22 @@ public:
         tbtnConfig5->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\230\276\347\244\272\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         tbtnConfig6->setText(QApplication::translate("ZEEI_WM_SETUP", "\350\266\205\346\240\207\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         tbtnConfig7->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\211\251\345\261\225\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        groupBox->setTitle(QApplication::translate("ZEEI_WM_SETUP", "\345\237\272\346\234\254\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         label_1->setText(QApplication::translate("ZEEI_WM_SETUP", "\347\253\231\347\202\271\345\220\215\347\247\260:", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("ZEEI_WM_SETUP", "\345\256\236\346\227\266\351\207\207\351\233\206\351\227\264\351\232\224(\347\247\222):", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("ZEEI_WM_SETUP", "\345\256\236\346\227\266\344\277\235\345\255\230\351\227\264\351\232\224(\347\247\222):", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("ZEEI_WM_SETUP", "\345\210\206\351\222\237\344\277\235\345\255\230\351\227\264\351\232\224(\345\210\206):", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\225\260\346\215\256\345\272\223\345\220\215\347\247\260:", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("ZEEI_WM_SETUP", "\345\256\236\346\227\266\344\277\235\345\255\230\351\227\264\351\232\224(\347\247\222):", 0, QApplication::UnicodeUTF8));
         label_6->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\225\260\346\215\256\345\272\223IP:", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\225\260\346\215\256\345\272\223PORT:", 0, QApplication::UnicodeUTF8));
         label_8->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\225\260\346\215\256\345\272\223\347\224\250\346\210\267\345\220\215:", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\225\260\346\215\256\345\272\223\345\257\206\347\240\201:", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("ZEEI_WM_SETUP", "\345\256\236\346\227\266\351\207\207\351\233\206\351\227\264\351\232\224(\347\247\222):", 0, QApplication::UnicodeUTF8));
         btn_base_save->setText(QApplication::translate("ZEEI_WM_SETUP", "\344\277\235\345\255\230", 0, QApplication::UnicodeUTF8));
+        btn_gui_save->setText(QApplication::translate("ZEEI_WM_SETUP", "\344\277\235\345\255\230", 0, QApplication::UnicodeUTF8));
+        groupBox_2->setTitle(QApplication::translate("ZEEI_WM_SETUP", "\346\230\276\347\244\272\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         label_10->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\230\276\347\244\272\345\210\206\347\273\204", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\230\276\347\244\272\345\217\202\346\225\260", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("ZEEI_WM_SETUP", "\346\230\276\347\244\272\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
-        btn_gui_save->setText(QApplication::translate("ZEEI_WM_SETUP", "\344\277\235\345\255\230", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ZEEI_WM_SETUP", "\345\233\240\345\255\220\345\256\232\344\271\211", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ZEEI_WM_SETUP", "\345\233\240\345\255\220\350\275\254\346\215\242", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("ZEEI_WM_SETUP", "\345\233\240\345\255\220\346\240\274\345\274\217\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));

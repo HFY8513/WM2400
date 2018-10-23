@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dbpage.ui'
 **
-** Created: Mon Oct 22 11:31:11 2018
+** Created: Tue Oct 23 16:36:30 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -180,6 +180,11 @@ public:
 
         spinBox = new QSpinBox(frameBottom);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(spinBox->sizePolicy().hasHeightForWidth());
+        spinBox->setSizePolicy(sizePolicy1);
         spinBox->setMinimum(0);
         spinBox->setMaximum(9999);
 

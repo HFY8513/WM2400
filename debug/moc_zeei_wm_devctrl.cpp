@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'zeei_wm_devctrl.h'
 **
-** Created: Sat Oct 13 12:27:37 2018
+** Created: Tue Oct 23 10:30:51 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
