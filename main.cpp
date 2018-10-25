@@ -10,7 +10,7 @@
 
 #include "global.h"
 #include "app.h"
-
+#include "tcpclient.h"
 utrace g_qttrace;
 char m_appdir[512];     //当前工作路径
 
@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
         dbConn = QSqlDatabase::addDatabase("QSQLITE");
         dbConn.setDatabaseName(qApp->applicationDirPath() + "/zendb.db");
     }
-
 
     if (dbConn.open()) {
         qDebug() << "连接数据库成功!";

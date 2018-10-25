@@ -6,11 +6,13 @@ ZEEI_WM_SYSCTRL::ZEEI_WM_SYSCTRL(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ZEEI_WM_SYSCTRL)
 {
+    tcp = new TcpClient();
     ui->setupUi(this);
     ui->widgetLeftConfig->setProperty("flag", "left");
     this->setStyleSheet(QString("QWidget[flag=\"left\"] QAbstractButton{min-height:%1px;max-height:%1px;}").arg(40));
     this->initSysCfg();
     this->initLeftConfig();
+    docmdList<<"润洗"<<"进样"<<"测量"<<"清洗"<<"预处理"<<"清水浸润"<<"全流程"<<"空闲"<<"参数设置"<<"系统设置"<<"周期模式"<<"联系模式"<<"应急模式"<<"质控模式"<<"面板复位";
 }
 
 ZEEI_WM_SYSCTRL::~ZEEI_WM_SYSCTRL()
@@ -39,28 +41,6 @@ void ZEEI_WM_SYSCTRL::initLeftConfig()
 
 void ZEEI_WM_SYSCTRL::initSysCfg()
 {
-//    uci myuci;
-//    char appdir[DM_FILEPATH_SIZE];
-//    strcpy(appdir,m_appdir);
-//    myuci.init(&g_qttrace, appdir);
-
-//    memset(&m_mainparam, 0, sizeof(m_mainparam));
-//    if (myuci.readmain(&m_mainparam) != 0)
-//    {
-//        g_qttrace.write(TRACE_INFO,"mainjson loadconfig fail!");
-//    }
-
-//    memset(&m_dasparam,0,sizeof(m_dasparam));
-//    if(myuci.readdas(&m_dasparam) != 0)
-//    {
-//        g_qttrace.write(TRACE_INFO,"dasjson loadconfig fail!");
-//    }
-
-//    memset(&m_wmsparam,0,sizeof(m_wmsparam));
-//    if(myuci.readwms(&m_wmsparam) != 0)
-//    {
-//        g_qttrace.write(TRACE_INFO,"wmsjson loadconfig fail!");
-//    }
     m_mainparam = App::g_mainparam;
     m_dasparam  = App::g_dasparam;
     m_wmsparam  = App::g_wmsparam;
@@ -88,8 +68,8 @@ void ZEEI_WM_SYSCTRL::initSysCfg()
         ui->cmb_trigmode->setCurrentIndex(m_wmsparam.systemparams[i].trigmode);
         ui->led_trigflowlimt->setText(QString::number(m_wmsparam.systemparams[i].trigflowlimt));
 
-//        ui->cmb_electrodemode->setCurrentIndex(m_wmsparam.systemparams[i].electrodemode);
-//        ui->led_electrodetime->setText(m_wmsparam.systemparams[i].electrodetime);
+        //        ui->cmb_electrodemode->setCurrentIndex(m_wmsparam.systemparams[i].electrodemode);
+        //        ui->led_electrodetime->setText(m_wmsparam.systemparams[i].electrodetime);
     }
 
 }
@@ -152,4 +132,14 @@ void ZEEI_WM_SYSCTRL::on_pbtn_query_clicked()
     ui->dbPage->setColumnNames(columnNames);
     ui->dbPage->setColumnWidths(columnWidths);
     ui->dbPage->select();
+}
+
+void ZEEI_WM_SYSCTRL::on_tableWidget_cellClicked(int row, int column)
+{
+    tcp->cmdctrl(row*5+column);
+}
+
+void ZEEI_WM_SYSCTRL::docmd(QString item, QString name)
+{
+
 }

@@ -31,6 +31,7 @@ INPUT(
 ./debug/dbpage.o
 ./debug/zeei_wm_dbquery.o
 ./debug/app.o
+./debug/tcpclient.o
 ./debug/moc_zeei_wm_home.o
 ./debug/moc_zeei_wm_init.o
 ./debug/moc_zeei_wm_setup.o
@@ -41,6 +42,7 @@ INPUT(
 ./debug/moc_qcustomplot.o
 ./debug/moc_dbpage.o
 ./debug/moc_zeei_wm_dbquery.o
+./debug/moc_tcpclient.o
 ./debug/qrc_image.o
 ./debug/qrc_qss.o
 );

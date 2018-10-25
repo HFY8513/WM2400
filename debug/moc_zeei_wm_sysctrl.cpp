@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'zeei_wm_sysctrl.h'
 **
-** Created: Tue Oct 23 16:07:06 2018
+** Created: Thu Oct 25 17:20:47 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_ZEEI_WM_SYSCTRL[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,7 @@ static const uint qt_meta_data_ZEEI_WM_SYSCTRL[] = {
       17,   16,   16,   16, 0x08,
       34,   16,   16,   16, 0x08,
       52,   16,   16,   16, 0x08,
+      87,   76,   16,   16, 0x08,
 
        0        // eod
 };
@@ -41,6 +42,7 @@ static const uint qt_meta_data_ZEEI_WM_SYSCTRL[] = {
 static const char qt_meta_stringdata_ZEEI_WM_SYSCTRL[] = {
     "ZEEI_WM_SYSCTRL\0\0initLeftConfig()\0"
     "leftConfigClick()\0on_pbtn_query_clicked()\0"
+    "row,column\0on_tableWidget_cellClicked(int,int)\0"
 };
 
 void ZEEI_WM_SYSCTRL::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -52,10 +54,10 @@ void ZEEI_WM_SYSCTRL::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->initLeftConfig(); break;
         case 1: _t->leftConfigClick(); break;
         case 2: _t->on_pbtn_query_clicked(); break;
+        case 3: _t->on_tableWidget_cellClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData ZEEI_WM_SYSCTRL::staticMetaObjectExtraData = {
@@ -90,9 +92,9 @@ int ZEEI_WM_SYSCTRL::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

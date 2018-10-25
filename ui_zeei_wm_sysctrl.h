@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_sysctrl.ui'
 **
-** Created: Tue Oct 23 16:19:47 2018
+** Created: Thu Oct 25 17:18:20 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,6 +26,7 @@
 #include <QtGui/QSpacerItem>
 #include <QtGui/QStackedWidget>
 #include <QtGui/QTableWidget>
+#include <QtGui/QTextEdit>
 #include <QtGui/QToolButton>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
@@ -73,6 +74,11 @@ public:
     QPushButton *pbtn_save;
     QSpacerItem *verticalSpacer;
     QWidget *page2;
+    QGridLayout *gridLayout_7;
+    QWidget *wmssvg;
+    QLabel *label_12;
+    QTextEdit *txd_log;
+    QHBoxLayout *horizontalLayout_2;
     QTableWidget *tableWidget;
     QTableWidget *tableWidget_2;
     QWidget *page3;
@@ -314,6 +320,39 @@ public:
         groupBox_3->raise();
         page2 = new QWidget();
         page2->setObjectName(QString::fromUtf8("page2"));
+        gridLayout_7 = new QGridLayout(page2);
+        gridLayout_7->setObjectName(QString::fromUtf8("gridLayout_7"));
+        wmssvg = new QWidget(page2);
+        wmssvg->setObjectName(QString::fromUtf8("wmssvg"));
+
+        gridLayout_7->addWidget(wmssvg, 0, 0, 2, 1);
+
+        label_12 = new QLabel(page2);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(label_12->sizePolicy().hasHeightForWidth());
+        label_12->setSizePolicy(sizePolicy1);
+        label_12->setFont(font);
+        label_12->setStyleSheet(QString::fromUtf8("color: rgb(0, 85, 255);"));
+
+        gridLayout_7->addWidget(label_12, 0, 1, 1, 1);
+
+        txd_log = new QTextEdit(page2);
+        txd_log->setObjectName(QString::fromUtf8("txd_log"));
+        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Expanding);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(txd_log->sizePolicy().hasHeightForWidth());
+        txd_log->setSizePolicy(sizePolicy2);
+        txd_log->setReadOnly(true);
+
+        gridLayout_7->addWidget(txd_log, 1, 1, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(20);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         tableWidget = new QTableWidget(page2);
         if (tableWidget->columnCount() < 5)
             tableWidget->setColumnCount(5);
@@ -375,8 +414,11 @@ public:
         tableWidget->setItem(3, 2, __qtablewidgetitem26);
         QTableWidgetItem *__qtablewidgetitem27 = new QTableWidgetItem();
         tableWidget->setItem(3, 3, __qtablewidgetitem27);
+        QTableWidgetItem *__qtablewidgetitem28 = new QTableWidgetItem();
+        tableWidget->setItem(3, 4, __qtablewidgetitem28);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 640, 603, 142));
+        sizePolicy.setHeightForWidth(tableWidget->sizePolicy().hasHeightForWidth());
+        tableWidget->setSizePolicy(sizePolicy);
         tableWidget->horizontalHeader()->setVisible(false);
         tableWidget->horizontalHeader()->setDefaultSectionSize(120);
         tableWidget->verticalHeader()->setVisible(false);
@@ -385,59 +427,63 @@ public:
         tableWidget->verticalHeader()->setHighlightSections(true);
         tableWidget->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         tableWidget->verticalHeader()->setStretchLastSection(false);
+
+        horizontalLayout_2->addWidget(tableWidget);
+
         tableWidget_2 = new QTableWidget(page2);
         if (tableWidget_2->columnCount() < 5)
             tableWidget_2->setColumnCount(5);
-        QTableWidgetItem *__qtablewidgetitem28 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem28);
         QTableWidgetItem *__qtablewidgetitem29 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem29);
+        tableWidget_2->setHorizontalHeaderItem(0, __qtablewidgetitem29);
         QTableWidgetItem *__qtablewidgetitem30 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem30);
+        tableWidget_2->setHorizontalHeaderItem(1, __qtablewidgetitem30);
         QTableWidgetItem *__qtablewidgetitem31 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem31);
+        tableWidget_2->setHorizontalHeaderItem(2, __qtablewidgetitem31);
         QTableWidgetItem *__qtablewidgetitem32 = new QTableWidgetItem();
-        tableWidget_2->setHorizontalHeaderItem(4, __qtablewidgetitem32);
+        tableWidget_2->setHorizontalHeaderItem(3, __qtablewidgetitem32);
+        QTableWidgetItem *__qtablewidgetitem33 = new QTableWidgetItem();
+        tableWidget_2->setHorizontalHeaderItem(4, __qtablewidgetitem33);
         if (tableWidget_2->rowCount() < 3)
             tableWidget_2->setRowCount(3);
-        QTableWidgetItem *__qtablewidgetitem33 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(0, __qtablewidgetitem33);
         QTableWidgetItem *__qtablewidgetitem34 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(1, __qtablewidgetitem34);
+        tableWidget_2->setVerticalHeaderItem(0, __qtablewidgetitem34);
         QTableWidgetItem *__qtablewidgetitem35 = new QTableWidgetItem();
-        tableWidget_2->setVerticalHeaderItem(2, __qtablewidgetitem35);
+        tableWidget_2->setVerticalHeaderItem(1, __qtablewidgetitem35);
         QTableWidgetItem *__qtablewidgetitem36 = new QTableWidgetItem();
-        tableWidget_2->setItem(0, 0, __qtablewidgetitem36);
+        tableWidget_2->setVerticalHeaderItem(2, __qtablewidgetitem36);
         QTableWidgetItem *__qtablewidgetitem37 = new QTableWidgetItem();
-        tableWidget_2->setItem(0, 1, __qtablewidgetitem37);
+        tableWidget_2->setItem(0, 0, __qtablewidgetitem37);
         QTableWidgetItem *__qtablewidgetitem38 = new QTableWidgetItem();
-        tableWidget_2->setItem(0, 2, __qtablewidgetitem38);
+        tableWidget_2->setItem(0, 1, __qtablewidgetitem38);
         QTableWidgetItem *__qtablewidgetitem39 = new QTableWidgetItem();
-        tableWidget_2->setItem(0, 3, __qtablewidgetitem39);
+        tableWidget_2->setItem(0, 2, __qtablewidgetitem39);
         QTableWidgetItem *__qtablewidgetitem40 = new QTableWidgetItem();
-        tableWidget_2->setItem(0, 4, __qtablewidgetitem40);
+        tableWidget_2->setItem(0, 3, __qtablewidgetitem40);
         QTableWidgetItem *__qtablewidgetitem41 = new QTableWidgetItem();
-        tableWidget_2->setItem(1, 0, __qtablewidgetitem41);
+        tableWidget_2->setItem(0, 4, __qtablewidgetitem41);
         QTableWidgetItem *__qtablewidgetitem42 = new QTableWidgetItem();
-        tableWidget_2->setItem(1, 1, __qtablewidgetitem42);
+        tableWidget_2->setItem(1, 0, __qtablewidgetitem42);
         QTableWidgetItem *__qtablewidgetitem43 = new QTableWidgetItem();
-        tableWidget_2->setItem(1, 2, __qtablewidgetitem43);
+        tableWidget_2->setItem(1, 1, __qtablewidgetitem43);
         QTableWidgetItem *__qtablewidgetitem44 = new QTableWidgetItem();
-        tableWidget_2->setItem(1, 3, __qtablewidgetitem44);
+        tableWidget_2->setItem(1, 2, __qtablewidgetitem44);
         QTableWidgetItem *__qtablewidgetitem45 = new QTableWidgetItem();
-        tableWidget_2->setItem(1, 4, __qtablewidgetitem45);
+        tableWidget_2->setItem(1, 3, __qtablewidgetitem45);
         QTableWidgetItem *__qtablewidgetitem46 = new QTableWidgetItem();
-        tableWidget_2->setItem(2, 0, __qtablewidgetitem46);
+        tableWidget_2->setItem(1, 4, __qtablewidgetitem46);
         QTableWidgetItem *__qtablewidgetitem47 = new QTableWidgetItem();
-        tableWidget_2->setItem(2, 1, __qtablewidgetitem47);
+        tableWidget_2->setItem(2, 0, __qtablewidgetitem47);
         QTableWidgetItem *__qtablewidgetitem48 = new QTableWidgetItem();
-        tableWidget_2->setItem(2, 2, __qtablewidgetitem48);
+        tableWidget_2->setItem(2, 1, __qtablewidgetitem48);
         QTableWidgetItem *__qtablewidgetitem49 = new QTableWidgetItem();
-        tableWidget_2->setItem(2, 3, __qtablewidgetitem49);
+        tableWidget_2->setItem(2, 2, __qtablewidgetitem49);
         QTableWidgetItem *__qtablewidgetitem50 = new QTableWidgetItem();
-        tableWidget_2->setItem(2, 4, __qtablewidgetitem50);
+        tableWidget_2->setItem(2, 3, __qtablewidgetitem50);
+        QTableWidgetItem *__qtablewidgetitem51 = new QTableWidgetItem();
+        tableWidget_2->setItem(2, 4, __qtablewidgetitem51);
         tableWidget_2->setObjectName(QString::fromUtf8("tableWidget_2"));
-        tableWidget_2->setGeometry(QRect(630, 640, 603, 142));
+        sizePolicy.setHeightForWidth(tableWidget_2->sizePolicy().hasHeightForWidth());
+        tableWidget_2->setSizePolicy(sizePolicy);
         tableWidget_2->horizontalHeader()->setVisible(false);
         tableWidget_2->horizontalHeader()->setDefaultSectionSize(120);
         tableWidget_2->verticalHeader()->setVisible(false);
@@ -446,6 +492,12 @@ public:
         tableWidget_2->verticalHeader()->setHighlightSections(true);
         tableWidget_2->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         tableWidget_2->verticalHeader()->setStretchLastSection(false);
+
+        horizontalLayout_2->addWidget(tableWidget_2);
+
+
+        gridLayout_7->addLayout(horizontalLayout_2, 2, 0, 1, 2);
+
         stackedWidget->addWidget(page2);
         page3 = new QWidget();
         page3->setObjectName(QString::fromUtf8("page3"));
@@ -562,6 +614,7 @@ public:
         label_6->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\247\246\345\217\221\346\250\241\345\274\217:", 0, QApplication::UnicodeUTF8));
         label_7->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\236\254\346\227\266\346\265\201\351\207\217\345\244\247\344\272\216(L/s):", 0, QApplication::UnicodeUTF8));
         pbtn_save->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\344\277\235\345\255\230\345\271\266\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        label_12->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\232\202\346\227\240PLC\347\211\210\346\234\254\344\277\241\346\201\257", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -621,57 +674,59 @@ public:
         ___qtablewidgetitem26->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\277\207\346\273\244\345\231\250\346\270\205\346\264\227\351\230\200\345\274\200\345\205\263", 0, QApplication::UnicodeUTF8));
         QTableWidgetItem *___qtablewidgetitem27 = tableWidget->item(3, 3);
         ___qtablewidgetitem27->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\240\267\346\260\264\346\235\257\346\270\205\346\264\227\351\230\200\345\274\200\345\205\263", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem28 = tableWidget->item(3, 4);
+        ___qtablewidgetitem28->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "1", 0, QApplication::UnicodeUTF8));
         tableWidget->setSortingEnabled(__sortingEnabled);
 
-        QTableWidgetItem *___qtablewidgetitem28 = tableWidget_2->horizontalHeaderItem(0);
-        ___qtablewidgetitem28->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem29 = tableWidget_2->horizontalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem29 = tableWidget_2->horizontalHeaderItem(0);
         ___qtablewidgetitem29->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem30 = tableWidget_2->horizontalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem30 = tableWidget_2->horizontalHeaderItem(1);
         ___qtablewidgetitem30->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem31 = tableWidget_2->horizontalHeaderItem(3);
+        QTableWidgetItem *___qtablewidgetitem31 = tableWidget_2->horizontalHeaderItem(2);
         ___qtablewidgetitem31->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem32 = tableWidget_2->horizontalHeaderItem(4);
+        QTableWidgetItem *___qtablewidgetitem32 = tableWidget_2->horizontalHeaderItem(3);
         ___qtablewidgetitem32->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem33 = tableWidget_2->verticalHeaderItem(0);
-        ___qtablewidgetitem33->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\350\241\214", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem34 = tableWidget_2->verticalHeaderItem(1);
+        QTableWidgetItem *___qtablewidgetitem33 = tableWidget_2->horizontalHeaderItem(4);
+        ___qtablewidgetitem33->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\345\210\227", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem34 = tableWidget_2->verticalHeaderItem(0);
         ___qtablewidgetitem34->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\350\241\214", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem35 = tableWidget_2->verticalHeaderItem(2);
+        QTableWidgetItem *___qtablewidgetitem35 = tableWidget_2->verticalHeaderItem(1);
         ___qtablewidgetitem35->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\350\241\214", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem36 = tableWidget_2->verticalHeaderItem(2);
+        ___qtablewidgetitem36->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\226\260\345\273\272\350\241\214", 0, QApplication::UnicodeUTF8));
 
         const bool __sortingEnabled1 = tableWidget_2->isSortingEnabled();
         tableWidget_2->setSortingEnabled(false);
-        QTableWidgetItem *___qtablewidgetitem36 = tableWidget_2->item(0, 0);
-        ___qtablewidgetitem36->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\266\246\346\264\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem37 = tableWidget_2->item(0, 1);
-        ___qtablewidgetitem37->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\277\233\346\240\267", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem38 = tableWidget_2->item(0, 2);
-        ___qtablewidgetitem38->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\265\213\351\207\217", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem39 = tableWidget_2->item(0, 3);
-        ___qtablewidgetitem39->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\270\205\346\264\227", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem40 = tableWidget_2->item(0, 4);
-        ___qtablewidgetitem40->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\242\204\345\244\204\347\220\206", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem41 = tableWidget_2->item(1, 0);
-        ___qtablewidgetitem41->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\270\205\346\260\264\346\265\270\346\266\246", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem42 = tableWidget_2->item(1, 1);
-        ___qtablewidgetitem42->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\205\250\346\265\201\347\250\213", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem43 = tableWidget_2->item(1, 2);
-        ___qtablewidgetitem43->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\251\272\351\227\262", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem44 = tableWidget_2->item(1, 3);
-        ___qtablewidgetitem44->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\217\202\346\225\260\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem45 = tableWidget_2->item(1, 4);
-        ___qtablewidgetitem45->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\263\273\347\273\237\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem46 = tableWidget_2->item(2, 0);
-        ___qtablewidgetitem46->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\221\250\346\234\237\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem47 = tableWidget_2->item(2, 1);
-        ___qtablewidgetitem47->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\201\224\347\263\273\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem48 = tableWidget_2->item(2, 2);
-        ___qtablewidgetitem48->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\272\224\346\200\245\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem49 = tableWidget_2->item(2, 3);
-        ___qtablewidgetitem49->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\264\250\346\216\247\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
-        QTableWidgetItem *___qtablewidgetitem50 = tableWidget_2->item(2, 4);
-        ___qtablewidgetitem50->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\235\242\346\235\277\345\244\215\344\275\215", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem37 = tableWidget_2->item(0, 0);
+        ___qtablewidgetitem37->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\266\246\346\264\227", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem38 = tableWidget_2->item(0, 1);
+        ___qtablewidgetitem38->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\277\233\346\240\267", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem39 = tableWidget_2->item(0, 2);
+        ___qtablewidgetitem39->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\265\213\351\207\217", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem40 = tableWidget_2->item(0, 3);
+        ___qtablewidgetitem40->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\270\205\346\264\227", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem41 = tableWidget_2->item(0, 4);
+        ___qtablewidgetitem41->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\242\204\345\244\204\347\220\206", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem42 = tableWidget_2->item(1, 0);
+        ___qtablewidgetitem42->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\346\270\205\346\260\264\346\265\270\346\266\246", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem43 = tableWidget_2->item(1, 1);
+        ___qtablewidgetitem43->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\205\250\346\265\201\347\250\213", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem44 = tableWidget_2->item(1, 2);
+        ___qtablewidgetitem44->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\251\272\351\227\262", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem45 = tableWidget_2->item(1, 3);
+        ___qtablewidgetitem45->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\217\202\346\225\260\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem46 = tableWidget_2->item(1, 4);
+        ___qtablewidgetitem46->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\347\263\273\347\273\237\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem47 = tableWidget_2->item(2, 0);
+        ___qtablewidgetitem47->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\221\250\346\234\237\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem48 = tableWidget_2->item(2, 1);
+        ___qtablewidgetitem48->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\201\224\347\263\273\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem49 = tableWidget_2->item(2, 2);
+        ___qtablewidgetitem49->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\272\224\346\200\245\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem50 = tableWidget_2->item(2, 3);
+        ___qtablewidgetitem50->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\350\264\250\346\216\247\346\250\241\345\274\217", 0, QApplication::UnicodeUTF8));
+        QTableWidgetItem *___qtablewidgetitem51 = tableWidget_2->item(2, 4);
+        ___qtablewidgetitem51->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\351\235\242\346\235\277\345\244\215\344\275\215", 0, QApplication::UnicodeUTF8));
         tableWidget_2->setSortingEnabled(__sortingEnabled1);
 
         label_11->setText(QApplication::translate("ZEEI_WM_SYSCTRL", "\345\274\200\345\247\213", 0, QApplication::UnicodeUTF8));

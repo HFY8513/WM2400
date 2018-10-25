@@ -10,7 +10,7 @@
 #include "global.h"
 #include "oss/thirds/qcustomplot/qcustomplot.h"
 #include <QMenu>
-
+#include "oss/thirds/qcustomplot/qcustomplot.h"
 //自定义模型设置列居中和右对齐
 class SqlQueryModel: public QSqlQueryModel
 {

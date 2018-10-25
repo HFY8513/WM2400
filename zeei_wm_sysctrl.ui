@@ -302,8 +302,6 @@
            </widget>
           </item>
          </layout>
-         <zorder>layoutWidget</zorder>
-         <zorder>layoutWidget</zorder>
         </widget>
        </item>
        <item row="0" column="1">
@@ -486,333 +484,383 @@
       <zorder>groupBox</zorder>
       <zorder>groupBox_2</zorder>
       <zorder>groupBox_3</zorder>
-      <zorder>layoutWidget</zorder>
       <zorder>verticalSpacer</zorder>
      </widget>
      <widget class="QWidget" name="page2">
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>640</y>
-         <width>603</width>
-         <height>142</height>
-        </rect>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>120</number>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>35</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderStretchLastSection">
-        <bool>false</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <item row="0" column="0">
-        <property name="text">
-         <string>系统工作/停止</string>
-        </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0" rowspan="2">
+        <widget class="QWidget" name="wmssvg" native="true"/>
        </item>
        <item row="0" column="1">
-        <property name="text">
-         <string>手动/自动</string>
-        </property>
-       </item>
-       <item row="0" column="2">
-        <property name="text">
-         <string>沉沙缸进样阀开关</string>
-        </property>
-       </item>
-       <item row="0" column="3">
-        <property name="text">
-         <string>电极桶进样阀开关</string>
-        </property>
-       </item>
-       <item row="0" column="4">
-        <property name="text">
-         <string>制样泵(隔膜泵)开关</string>
-        </property>
-       </item>
-       <item row="1" column="0">
-        <property name="text">
-         <string>清洗总阀开关</string>
-        </property>
+        <widget class="QLabel" name="label_12">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 85, 255);</string>
+         </property>
+         <property name="text">
+          <string>暂无PLC版本信息</string>
+         </property>
+        </widget>
        </item>
        <item row="1" column="1">
-        <property name="text">
-         <string>仪表启动开关</string>
-        </property>
+        <widget class="QTextEdit" name="txd_log">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="2">
-        <property name="text">
-         <string>1#采样泵开关</string>
-        </property>
+       <item row="2" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>120</number>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>35</number>
+           </attribute>
+           <attribute name="verticalHeaderHighlightSections">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>系统工作/停止</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>手动/自动</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>沉沙缸进样阀开关</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>电极桶进样阀开关</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>制样泵(隔膜泵)开关</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>清洗总阀开关</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>仪表启动开关</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>1#采样泵开关</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>2#采样泵开关</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>沉沙缸排水阀开关</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>电极桶排水阀开关</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>空压机总阀开关</string>
+            </property>
+           </item>
+           <item row="2" column="2">
+            <property name="text">
+             <string>加药泵开关</string>
+            </property>
+           </item>
+           <item row="2" column="3">
+            <property name="text">
+             <string>1#采样阀开关</string>
+            </property>
+           </item>
+           <item row="2" column="4">
+            <property name="text">
+             <string>2#采样阀开关</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>样水杯排水阀开关</string>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string>沉砂缸清洗阀开关</string>
+            </property>
+           </item>
+           <item row="3" column="2">
+            <property name="text">
+             <string>过滤器清洗阀开关</string>
+            </property>
+           </item>
+           <item row="3" column="3">
+            <property name="text">
+             <string>样水杯清洗阀开关</string>
+            </property>
+           </item>
+           <item row="3" column="4">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>120</number>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>46</number>
+           </attribute>
+           <attribute name="verticalHeaderHighlightSections">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>新建行</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>新建列</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>润洗</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>进样</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>测量</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>清洗</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>预处理</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>清水浸润</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>全流程</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>空闲</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>参数设置</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>系统设置</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>周期模式</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>联系模式</string>
+            </property>
+           </item>
+           <item row="2" column="2">
+            <property name="text">
+             <string>应急模式</string>
+            </property>
+           </item>
+           <item row="2" column="3">
+            <property name="text">
+             <string>质控模式</string>
+            </property>
+           </item>
+           <item row="2" column="4">
+            <property name="text">
+             <string>面板复位</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
        </item>
-       <item row="1" column="3">
-        <property name="text">
-         <string>2#采样泵开关</string>
-        </property>
-       </item>
-       <item row="1" column="4">
-        <property name="text">
-         <string>沉沙缸排水阀开关</string>
-        </property>
-       </item>
-       <item row="2" column="0">
-        <property name="text">
-         <string>电极桶排水阀开关</string>
-        </property>
-       </item>
-       <item row="2" column="1">
-        <property name="text">
-         <string>空压机总阀开关</string>
-        </property>
-       </item>
-       <item row="2" column="2">
-        <property name="text">
-         <string>加药泵开关</string>
-        </property>
-       </item>
-       <item row="2" column="3">
-        <property name="text">
-         <string>1#采样阀开关</string>
-        </property>
-       </item>
-       <item row="2" column="4">
-        <property name="text">
-         <string>2#采样阀开关</string>
-        </property>
-       </item>
-       <item row="3" column="0">
-        <property name="text">
-         <string>样水杯排水阀开关</string>
-        </property>
-       </item>
-       <item row="3" column="1">
-        <property name="text">
-         <string>沉砂缸清洗阀开关</string>
-        </property>
-       </item>
-       <item row="3" column="2">
-        <property name="text">
-         <string>过滤器清洗阀开关</string>
-        </property>
-       </item>
-       <item row="3" column="3">
-        <property name="text">
-         <string>样水杯清洗阀开关</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QTableWidget" name="tableWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>640</y>
-         <width>603</width>
-         <height>142</height>
-        </rect>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>120</number>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>46</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderStretchLastSection">
-        <bool>false</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>新建行</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>新建列</string>
-        </property>
-       </column>
-       <item row="0" column="0">
-        <property name="text">
-         <string>润洗</string>
-        </property>
-       </item>
-       <item row="0" column="1">
-        <property name="text">
-         <string>进样</string>
-        </property>
-       </item>
-       <item row="0" column="2">
-        <property name="text">
-         <string>测量</string>
-        </property>
-       </item>
-       <item row="0" column="3">
-        <property name="text">
-         <string>清洗</string>
-        </property>
-       </item>
-       <item row="0" column="4">
-        <property name="text">
-         <string>预处理</string>
-        </property>
-       </item>
-       <item row="1" column="0">
-        <property name="text">
-         <string>清水浸润</string>
-        </property>
-       </item>
-       <item row="1" column="1">
-        <property name="text">
-         <string>全流程</string>
-        </property>
-       </item>
-       <item row="1" column="2">
-        <property name="text">
-         <string>空闲</string>
-        </property>
-       </item>
-       <item row="1" column="3">
-        <property name="text">
-         <string>参数设置</string>
-        </property>
-       </item>
-       <item row="1" column="4">
-        <property name="text">
-         <string>系统设置</string>
-        </property>
-       </item>
-       <item row="2" column="0">
-        <property name="text">
-         <string>周期模式</string>
-        </property>
-       </item>
-       <item row="2" column="1">
-        <property name="text">
-         <string>联系模式</string>
-        </property>
-       </item>
-       <item row="2" column="2">
-        <property name="text">
-         <string>应急模式</string>
-        </property>
-       </item>
-       <item row="2" column="3">
-        <property name="text">
-         <string>质控模式</string>
-        </property>
-       </item>
-       <item row="2" column="4">
-        <property name="text">
-         <string>面板复位</string>
-        </property>
-       </item>
-      </widget>
+      </layout>
      </widget>
      <widget class="QWidget" name="page3">
       <layout class="QGridLayout" name="gridLayout_4">

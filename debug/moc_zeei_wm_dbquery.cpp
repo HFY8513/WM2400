@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'zeei_wm_dbquery.h'
 **
-** Created: Tue Oct 23 17:40:32 2018
+** Created: Thu Oct 25 17:20:52 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

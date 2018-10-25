@@ -31,6 +31,7 @@ INPUT(
 ./release/dbpage.o
 ./release/zeei_wm_dbquery.o
 ./release/app.o
+./release/tcpclient.o
 ./release/moc_zeei_wm_home.o
 ./release/moc_zeei_wm_init.o
 ./release/moc_zeei_wm_setup.o
@@ -41,6 +42,7 @@ INPUT(
 ./release/moc_qcustomplot.o
 ./release/moc_dbpage.o
 ./release/moc_zeei_wm_dbquery.o
+./release/moc_tcpclient.o
 ./release/qrc_image.o
 ./release/qrc_qss.o
 );

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dbpage.h'
 **
-** Created: Tue Oct 23 15:32:02 2018
+** Created: Thu Oct 25 17:20:49 2018
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!

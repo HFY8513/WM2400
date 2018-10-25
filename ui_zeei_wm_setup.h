@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'zeei_wm_setup.ui'
 **
-** Created: Tue Oct 23 17:29:08 2018
+** Created: Thu Oct 25 17:18:20 2018
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!

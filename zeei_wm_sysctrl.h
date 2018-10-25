@@ -10,6 +10,7 @@
 #include "global.h"
 #include "dbpage.h"
 #include "app.h"
+#include "tcpclient.h"
 namespace Ui {
 class ZEEI_WM_SYSCTRL;
 }
@@ -34,10 +35,18 @@ private:
     QList<QString> columnNames; //字段名集合
     QList<int> columnWidths;    //字段宽度集合
 
+//    QList<QString ,QString> plcslides;
+
+    QStringList docmdList;
+    TcpClient *tcp;
 private slots:
      void initLeftConfig();
      void leftConfigClick();
      void on_pbtn_query_clicked();
+     void on_tableWidget_cellClicked(int row, int column);
+private:
+     void docmd(QString item,QString name);
+
 };
 
 #endif // ZEEI_WM_SYSCTRL_H

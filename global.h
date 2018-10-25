@@ -125,4 +125,17 @@ enum ShowType {
     SHOW_CURVE
 };
 
+typedef struct rtreqinfo{
+    char st[10];
+    char stationid[50];
+    int  sysid;
+    char querymode[10];
+    int  querytype;
+    int  queryint;
+    char begintime[30];
+    char endtime[30];
+    int item[10];
+    char type[10];
+}rtreqinfo;
+
 #endif // GLOBAL_H

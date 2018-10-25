@@ -5,7 +5,7 @@
 
 extern utrace g_qttrace;
 extern char m_appdir[512];
-//extern factor_map g_fidmaps[MAX_DAQ_ITEM];
+
 WM_SETUP_DAS::WM_SETUP_DAS(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WM_SETUP_DAS)
@@ -22,26 +22,6 @@ WM_SETUP_DAS::~WM_SETUP_DAS()
 
 void WM_SETUP_DAS::initPage()
 {
-//    uci myuci;
-//    char appdir[DM_FILEPATH_SIZE];
-//    strcpy(appdir,m_appdir);
-
-//    if (myuci.init(&g_qttrace, appdir) != 0)
-//    {
-//        qDebug()<<-2;
-//    }
-
-//    memset(&m_mainparam, 0, sizeof(m_mainparam));
-//    memset(&m_dasparam, 0, sizeof(m_dasparam));
-
-//    if (myuci.readmain(&m_mainparam) != 0)
-//    {
-//        return -3;
-//    }
-//    if (myuci.readdas(&m_dasparam) != 0)
-//    {
-//        return -7;
-//    }
     m_mainparam = App::g_mainparam;
     m_dasparam  = App::g_dasparam;
     initComTable();
@@ -52,8 +32,7 @@ void WM_SETUP_DAS::initPage()
 
 void WM_SETUP_DAS::initFrom()
 {
-    QTreeWidget* treeWidget = ui->treeWidget;//我已经在ui设计师中拖了一个QTreeWidget
-
+    QTreeWidget* treeWidget = ui->treeWidget;
     treeWidget->expandAll();
 
     QString headers;

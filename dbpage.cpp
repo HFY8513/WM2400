@@ -60,32 +60,34 @@ void DbPage::initQcustomPlot()
     customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
                                 QCP::iSelectLegend | QCP::iSelectPlottables);
 
-    customPlot->yAxis->setRange(0, 200);
-    customPlot->yAxis->setSubTicks(true);
-     customPlot->xAxis->setSubTicks(true);
-    //    customPlot->xAxis->setTickLabelType(QCPAxis::ltDateTime);
-    //    customPlot->xAxis->setDateTimeFormat("hh:mm:ss");
-    //    customPlot->xAxis->setDateTimeSpec(Qt::LocalTime);
-    //    QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
-    //    textTicker->set
-    //    textTicker->setSubTickCount(5);
-    //    textTicker->addTick(0.0, "yt");
-    //    textTicker->addTick(1.0, "Bacteria");
-    //    textTicker->addTick(2.0, "Protozoa");
-    //    textTicker->addTick(3.0, "Chromista");
-    //    textTicker->addTick(4.0, "Plants");
-    //    textTicker->addTick(5.0, "Fungi");
-    //    textTicker->addTick(6.0, "Animals");
-    //    textTicker->addTick(8.0, "Vogons");
-    //    customPlot->xAxis->setTicker(textTicker);
+//    QSharedPointer<QCPAxisTickerFixed> fixedTicker(new QCPAxisTickerFixed);
+//    customPlot->yAxis->setTicker(fixedTicker);
+//    fixedTicker->setTickCount(20);
+//    fixedTicker->setTickStep(10);
+//    customPlot->yAxis->setRange(0, 10);
 
-    QSharedPointer<QCPAxisTickerDateTime> dateTicker(new QCPAxisTickerDateTime);
 
-    // dateTicker->setDateTimeSpec(Qt::UTC);
-    customPlot->xAxis->setTicker(dateTicker);
-    customPlot->xAxis->setRange(QCPAxisTickerDateTime::dateTimeToKey(QDate(2018,9,22)),QCPAxisTickerDateTime::dateTimeToKey(QDate(2018,9,23)));
+    customPlot->yAxis->setSubTicks(false);
+    customPlot->xAxis->setSubTicks(true);
+
+    QSharedPointer<QCPAxisTickerTime> timeTicker(new QCPAxisTickerTime);
+    customPlot->xAxis->setTicker(timeTicker);
+    timeTicker->setTickCount(24);
+    //设置刻度表示策略
+    timeTicker->setTickStepStrategy(QCPAxisTicker::tssMeetTickCount);
+
+    customPlot->xAxis->setRange(0, 3600*24);
+
+    timeTicker->setTimeFormat("%h:%m");
+    QSharedPointer<QCPAxisTickerTime> dateTicker(new QCPAxisTickerTime);
+
+    //customPlot->xAxis->setTicker(dateTicker);
+//    dateTicker->setFieldWidth(QCPAxisTickerTime::TimeUnit::tuHours,24);
+    //customPlot->xAxis->setRange(QCPAxisTickerTime::t(QTime(0,0,0)),QCPAxisTickerDateTime::dateTimeToKey(QTime(24,0,0)));
+
+    //customPlot->xAxis->setRange(QCPAxisTickerDateTime::dateTimeToKey(QDate(2018,9,24)),QCPAxisTickerDateTime::dateTimeToKey(QDate(2018,9,25)));
     //customPlot->xAxis->setRange(QCPAxisTickerDateTime::dateTimeToKey(QDate::currentDate()),QCPAxisTickerDateTime::dateTimeToKey(QDate::currentDate().addDays(1)));
-    dateTicker->setDateTimeFormat("hh:mm");
+    dateTicker->setTimeFormat("hh:mm");
 
     customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop | Qt::AlignRight);
     customPlot->legend->setBrush(QColor(255, 255, 255, 200));
@@ -177,7 +179,7 @@ void DbPage::addRandomGraph(QVector<double> x, QVector<double> y, QString fidnam
     graphPen.setColor(QColor(rand()%245+10, rand()%245+10, rand()%245+10));
     graphPen.setWidthF(1.5);
     customPlot->graph()->setPen(graphPen);
-    customPlot->replot();
+
 }
 
 void DbPage::removeSelectedGraph()
@@ -240,8 +242,8 @@ void DbCountThread::setSql(const QString &sql)
 }
 
 DbPage::DbPage(QWidget *parent) :
-  QWidget(parent),
-  ui(new Ui::DbPage)
+    QWidget(parent),
+    ui(new Ui::DbPage)
 {
     ui->setupUi(this);
 
@@ -331,7 +333,7 @@ void DbPage::slot_receiveCount(quint32 count, double msec)
     qDebug()<<sql;
     fidcount = 0;
     while(select_fidmaps[fidcount].fid != NULL) {fidcount++;}
-    if(showType==SHOW_DATA){
+    if(showType == SHOW_DATA){
         bindData(sql);
     }else{
         showCurrve(sql);
@@ -340,8 +342,8 @@ void DbPage::slot_receiveCount(quint32 count, double msec)
 
 void DbPage::bindData(const QString &sql)
 {
-//    int row=0;
-//    int rowcount = 0;
+    //    int row=0;
+    //    int rowcount = 0;
 
     QSqlQuery query(QSqlDatabase::database(connName));
     query.exec(sql);
@@ -360,23 +362,23 @@ void DbPage::bindData(const QString &sql)
     //利用setModel()方法将数据模型与Qui->tableView绑定
     //ui->tableView->setModel(data_model);
 
-//    while (query.next())
-//    {
-//        QSqlRecord r = query.record();
-//        data_model->setItem(row, 0, new QStandardItem(r.field(r.field(4).name()).value().toDateTime().toString("yyyy-MM-dd hh:mm:ss")));
-//        for(int i=0;i<fidcount;i++)
-//        {
-//            if(select_fidmaps[i].fid==r.field(r.field(2).name()).value())
-//                data_model->setItem(row, 1+i, new QStandardItem(r.field(r.field(5).name()).value().toString()));
-//        }
-//        rowcount++;
+    //    while (query.next())
+    //    {
+    //        QSqlRecord r = query.record();
+    //        data_model->setItem(row, 0, new QStandardItem(r.field(r.field(4).name()).value().toDateTime().toString("yyyy-MM-dd hh:mm:ss")));
+    //        for(int i=0;i<fidcount;i++)
+    //        {
+    //            if(select_fidmaps[i].fid==r.field(r.field(2).name()).value())
+    //                data_model->setItem(row, 1+i, new QStandardItem(r.field(r.field(5).name()).value().toString()));
+    //        }
+    //        rowcount++;
 
-//        if(rowcount == fidcount)
-//        {
-//            rowcount=0;
-//            row++;
-//        }
-//    }
+    //        if(rowcount == fidcount)
+    //        {
+    //            rowcount=0;
+    //            row++;
+    //        }
+    //    }
 
     //设置选中时为整行选中
     ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -406,6 +408,7 @@ void DbPage::bindData(const QString &sql)
 
 void DbPage::showCurrve(const QString &sql)
 {
+    removeAllGraphs();
     tempSql = QString("select %1 from %2 %3  %4").arg(selectColumn).arg(tableName).arg(whereSql).arg(groupSql);
     QString sql1 = QString("%1 limit %2,%3;").arg(tempSql).arg(startIndex).arg("2880"); //组织分页SQL语句
 
@@ -413,22 +416,26 @@ void DbPage::showCurrve(const QString &sql)
     customPlot->replot();
     QVector<double> x(2880);
 
-
+    double max = 0;
+    QVector<double> y(2880);
     for(int i=0; i<fidcount; i++)
     {
         QSqlQuery query(QSqlDatabase::database(connName));
         query.exec(sql1);
-        QVector<double> y(2880);
-        int ycount=0;
+
+
         int xcount=0;
+        int ycount=0;
 
         if(i==0)
         {
             while (query.next())
             {
                 QSqlRecord r = query.record();
-                x[xcount++] = r.field(r.field(i).name()).value().toDateTime().toTime_t();
+                //qDebug()<< QTime(0,0,0).secsTo(r.field(r.field(i).name()).value().toDateTime().time());
+                x[xcount++] = QTime(0,0,0).secsTo(r.field(r.field(i).name()).value().toDateTime().time());
                 y[ycount++] = r.field(r.field(i+1).name()).value().toDouble();
+                if(max < y[ycount-1]) { max =y[ycount-1]; }
             }
         }
         else
@@ -441,8 +448,12 @@ void DbPage::showCurrve(const QString &sql)
         }
 
         addRandomGraph(x,y,columnNames.at(i+1));
-        y.clear();
+        //y.clear();
     }
+    qDebug()<<max;
+    customPlot->yAxis->setRange(0,max);
+    customPlot->replot();
+    y.clear();
     x.clear();
 }
 
@@ -558,7 +569,6 @@ void DbPage::select()
     qDebug()<<tempSql;
     //采用线程执行查询复合条件的记录行数
     DbCountThread *dbCountThread = new DbCountThread(this);
-    //绑定查询结果信号槽,一旦收到结果则立即执行
     connect(dbCountThread, SIGNAL(receiveCount(quint32, double)), this, SLOT(slot_receiveCount(quint32, double)));
 
     //设置数据库连接名称和查询语句,并启动线程
